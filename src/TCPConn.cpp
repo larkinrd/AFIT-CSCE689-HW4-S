@@ -351,7 +351,7 @@ void TCPConn::waitForData() {
 
 void TCPConn::awaitAck() {
 
-   // Should have the awk message
+   // Should have the ack message
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
@@ -361,7 +361,7 @@ void TCPConn::awaitAck() {
       if (findCmd(buf, c_ack) == buf.end())
       {
          std::stringstream msg;
-         msg << "Awk expected from data send, received something else. Node:" << getNodeID() << "\n";
+         msg << "Ack expected from data send, received something else. Node:" << getNodeID() << "\n";
          _server_log.writeLog(msg.str().c_str());
       }
   

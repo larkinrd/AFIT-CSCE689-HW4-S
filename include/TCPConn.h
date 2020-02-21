@@ -51,6 +51,7 @@ public:
    const char *getIPAddrStr(std::string &buf);
    unsigned short getPort() { return _connfd.getPort(); }; // host format
    const char *getNodeID() { return _node_id.c_str(); };
+   const char *getSvrID() {return _svr_id.c_str(); }; 
 
    // Connections can set the node or server ID of this connection
    void setNodeID(const char *new_id) { _node_id = new_id; };
@@ -68,14 +69,15 @@ public:
    // Assign outgoing data and sets up the socket to manage the transmission
    void assignOutgoingData(std::vector<uint8_t> &data);
 
-protected:
+
    // Functions to execute various stages of a connection 
+   //MADE THEM PUBLIC... I DON'T SEE THE NEED TO MAKE EM PROTECTED
    void sendSID();
    void waitForSID();
    void transmitData();
    void waitForData();
    void awaitAck();
-
+protected:
    // Looks for commands in the data stream
    std::vector<uint8_t>::iterator findCmd(std::vector<uint8_t> &buf,
                                                    std::vector<uint8_t> &cmd);

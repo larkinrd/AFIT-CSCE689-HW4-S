@@ -15,6 +15,8 @@
 #include <crypto++/files.h>
 #include "TCPServer.h"
 #include "ALMgr.h"
+//LARKIN ADD FOR DYNAMIC CAST
+#include "QueueMgr.h"
 
 TCPServer::TCPServer(unsigned int verbosity)
                         :_aes_key(CryptoPP::AES::DEFAULT_KEYLENGTH), 
@@ -118,10 +120,12 @@ TCPConn *TCPServer::handleSocket() {
 
       _connlist.push_back(std::unique_ptr<TCPConn>(new_conn));
 
-      // Get their IP Address string to use in logging
+      // Get their IP Address and Port string to use in logging
       std::string ipaddr_str;
       new_conn->getIPAddrStr(ipaddr_str);
-
+      unsigned short port_num;
+      port_num = new_conn->getPort();
+      std::string port_str = std::to_string(port_num);
 
       // Check the whitelist
       ALMgr al("whitelist");
@@ -139,13 +143,32 @@ TCPConn *TCPServer::handleSocket() {
          return NULL;
       }
 
-      std::string msg = "Connection from IP address '";
+      std::string msg = "Connection from IP '";
       msg += ipaddr_str;
-      msg += "'.";
+      msg += "' PORT '";
+      msg += port_str;
+      msg += "' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()";
+      msg += new_conn->getNodeID(); //so this info aint known at this time
+
       _server_log.writeLog(msg);
 
+      //To get access to the Servers SID stored in the child class QueueMgr I can
+      //dynamically cast the child class since the parent has at least one virtual 
+      //void function
+      
+// STATUS=2 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
+
+      std::string isthiscorrectserverid;
+      if (QueueMgr* child = dynamic_cast<QueueMgr*>(this)){
+         isthiscorrectserverid = child->getServerID();
+      }
+// STATUS=2 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
+      //SET and SEND the servers SID
+      new_conn->setSvrID(isthiscorrectserverid.c_str());
+      new_conn->sendSID();
+// STATUS=3 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
       // Send an authentication string in cleartext
-            
+                  
 
       return new_conn;
    }
@@ -198,9 +221,11 @@ void TCPServer::handleConnections() {
          // Else we're in a different state and there's not data waiting to be read
          } else if (!(*tptr)->isInputDataReady()) {
          // Log it
-            std::string msg = "Node ID '";
+            std::string msg = "Node ID/IP/Port (not coded)'";
             msg += (*tptr)->getNodeID();
-            msg += "' lost connection.";
+            msg += "' lost connection from '";
+            msg += (*tptr)->getSvrID();
+            msg += "'";
             _server_log.writeLog(msg);
 
             // Remove them from the connect list
