@@ -143,36 +143,22 @@ TCPConn *TCPServer::handleSocket() {
          return NULL;
       }
 
+      std::string isthiscorrectserverid; //, isthiscorrectnodeid;
+      if (QueueMgr* child = dynamic_cast<QueueMgr*>(this)){
+         isthiscorrectserverid = child->getServerID();
+         //isthiscorrectnodeid = child->getClientID(); //Won't work... this is a lookup in the Severs list and a Random High Port gets generated
+      }
+      new_conn->setSvrID(isthiscorrectserverid.c_str());
+
       std::string msg = "Connection from IP '";
       msg += ipaddr_str;
       msg += "' PORT '";
       msg += port_str;
-      msg += "' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()";
+      msg += "' with NodeID ";
       msg += new_conn->getNodeID(); //so this info aint known at this time
+      msg += "(can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete";
 
-      _server_log.writeLog(msg);
-
-      //To get access to the Servers SID stored in the child class QueueMgr I can
-      //dynamically cast the child class since the parent has at least one virtual 
-      //void function
-      
-// STATUS=2 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
-
-      //std::string isthiscorrectserverid;
-      //if (QueueMgr* child = dynamic_cast<QueueMgr*>(this)){
-      //   isthiscorrectserverid = child->getServerID();
-      //}
-// STATUS=2 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
-      //SET and SEND the servers SID
-      //new_conn->setSvrID(isthiscorrectserverid.c_str());
-      //new_conn->sendSID(); //s_status = datatx
-// STATUS=3 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
-      // Send an authentication string in cleartext
-
-      // LAST STEP set server to rx data
-      // I NEVER successfully receive data this way
-      //new_conn->waitForData();
-                  
+      _server_log.writeLog(msg);        
 
       return new_conn;
    }
@@ -235,7 +221,7 @@ void TCPServer::handleConnections() {
             // Remove them from the connect list
             tptr = _connlist.erase(tptr);
             std::cout << "Connection disconnected.\n";
-            continue;
+            continue; 
          }
          tptr++;
          continue;

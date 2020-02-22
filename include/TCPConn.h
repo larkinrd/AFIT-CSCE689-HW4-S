@@ -70,7 +70,7 @@ public:
    // Assign outgoing data and sets up the socket to manage the transmission
    void assignOutgoingData(std::vector<uint8_t> &data);
 
-
+   //void gen_random(std::string &s, const int len);
    // Functions to execute various stages of a connection 
    //MADE THEM PUBLIC... I DON'T SEE THE NEED TO MAKE EM PROTECTED
    void clientSendSID();
@@ -81,6 +81,7 @@ public:
    void transmitData();
    void waitForData();
    void awaitAck();
+
 protected:
    // Looks for commands in the data stream
    std::vector<uint8_t>::iterator findCmd(std::vector<uint8_t> &buf, std::vector<uint8_t> &cmd);
