@@ -174,14 +174,46 @@ void TCPConn::handleConnection() {
 
          // Client: Just connected, send our SID
          case s_connecting:
-            sendSID();
+            clientSendSID();
             break;
 
          // Server: Wait for the SID from a newly-connected client, then send our SID
          case s_connected:
-            waitForSID();
+            serverWaitForSID();
             break;
-   
+//NEW THOUGHTS
+/*         //txrx challenges
+         case s_txrxchallenge:
+            txrxChallenge();
+            break;
+         //encrypt challenges and send back
+         case s_encryptchallenges:
+            encryptChallenges();
+            break;
+         //set up connected comms
+         case s_decryptchallenges:
+            decryptChallenges();
+            break;
+*/
+
+//OLD THOUGHTS
+         //client - tx challenge to server 
+         case s_clienttxchallenge:
+            clientTxChallenge();
+            break;
+         //server - encrypt challenge and send to client
+         //   ??????    - tx challenge to client
+         case s_svrrxchallenge:
+            svrRxChallenge();
+            break;
+         
+         //client - verify server response to challenge (decrypt), go to tx encrypted data client -> server
+         //  ????     - encrypt challenge and send to server
+         case s_clientrxsvrchallengeresponse:
+            clientRxChallengeResponse();
+            break;
+         //server - very client response to challenge (decrypt), to to rx encrypted data from client
+
          // Client: connecting user - replicate data
          case s_datatx:
             transmitData();
@@ -219,12 +251,14 @@ void TCPConn::handleConnection() {
  *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
  **********************************************************************************************/
 
-void TCPConn::sendSID() {
+void TCPConn::clientSendSID() {
    std::vector<uint8_t> buf(_svr_id.begin(), _svr_id.end());
    wrapCmd(buf, c_sid, c_endsid);
    sendData(buf);
 
-   _status = s_datatx; 
+   //_status = s_datatx;//this is client goto clientsendchallenge
+   _status = s_clienttxchallenge;
+   //_status = s_txrxchallenge;
 }
 
 /**********************************************************************************************
@@ -233,7 +267,7 @@ void TCPConn::sendSID() {
  *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
  **********************************************************************************************/
 
-void TCPConn::waitForSID() {
+void TCPConn::serverWaitForSID() {
 
    // If data on the socket, should be our Auth string from our host server
    if (_connfd.hasData()) {
@@ -253,13 +287,89 @@ void TCPConn::waitForSID() {
       std::string node(buf.begin(), buf.end());
       setNodeID(node.c_str());
 
-      // Send our Node ID
+      // Send our Node ID... sends a blank node
       buf.assign(_svr_id.begin(), _svr_id.end());
       wrapCmd(buf, c_sid, c_endsid);
       sendData(buf);
 
-      _status = s_datarx;
+      //_status = s_datarx;//this is server goto receive challenge
+      _status = s_svrrxchallenge;
+      //_status = s_txrxchallenge;
    }
+}
+
+void TCPConn::clientTxChallenge(){
+
+/*
+   std::cout << "In clientTxChallenge()\n";
+   //GOT HERE, don't care whats on the buffer, send my challenge
+   std::vector<uint8_t> buf;
+   buf.assign(_svr_id.begin(), _svr_id.end());
+   wrapCmd(buf, c_sid, c_endsid);
+   //buf.insert(buf.begin(), 4); //probably works and inserts a integer 4
+   std::string randomstring = "myrandomchallengestring";
+   std::vector<uint8_t> randomchallenge;
+   randomchallenge.assign(randomstring.begin(), randomstring.end());
+   wrapCmd(randomchallenge, c_auth, c_endauth);
+   buf.insert(buf.end(), randomchallenge.begin(), randomchallenge.end());
+   sendData(buf);
+ */
+
+//COPY OF clientSendSID
+   std::vector<uint8_t> buf(_svr_id.begin(), _svr_id.end());
+   wrapCmd(buf, c_sid, c_endsid);
+   
+   sendEncryptedData(buf);
+   //sendData(buf);
+
+   _status = s_clientrxsvrchallengeresponse;
+}
+
+
+void TCPConn::svrRxChallenge(){
+
+//COPY OF SERVERWAITFORSID()
+// If data on the socket, should be our Auth string from our host server
+   if (_connfd.hasData()) {
+      std::vector<uint8_t> buf;
+
+      if (!getEncryptedData(buf))
+         return;
+
+      if (!getCmdData(buf, c_sid, c_endsid)) {
+         std::stringstream msg;
+         msg << "SID string from connecting client invalid format. Cannot authenticate.";
+         _server_log.writeLog(msg.str().c_str());
+         disconnect();
+         return;
+      }
+
+      std::string node(buf.begin(), buf.end());
+      setNodeID(node.c_str());
+
+      // Send our Node ID... sends a blank node
+      buf.assign(_svr_id.begin(), _svr_id.end());
+      wrapCmd(buf, c_sid, c_endsid);
+      sendData(buf);
+
+_status = s_datarx;
+   }
+
+}
+
+void TCPConn::clientRxChallengeResponse(){
+      
+      /*******************************/
+      //THIS CODE HERE JACKS STUFF UP AND GETS ME OUT OF ORDER
+      /*******************************/
+      
+      //COPY OF clientSendSID
+ //  std::vector<uint8_t> buf(_svr_id.begin(), _svr_id.end());
+  // wrapCmd(buf, c_sid, c_endsid);
+  // sendData(buf);
+
+   _status = s_datatx;
+
 }
 
 
@@ -311,8 +421,11 @@ void TCPConn::transmitData() {
 
 void TCPConn::waitForData() {
 
+//std::cout << "\n Entered TCPConn::waitForData";
    // If data on the socket, should be replication data
    if (_connfd.hasData()) {
+
+std::cout << "\n Entered TCPConn::waitForData where _connfd.hasData()";
       std::vector<uint8_t> buf;
 
       if (!getData(buf))
@@ -517,9 +630,13 @@ bool TCPConn::getCmdData(std::vector<uint8_t> &buf, std::vector<uint8_t> &startc
 
 void TCPConn::wrapCmd(std::vector<uint8_t> &buf, std::vector<uint8_t> &startcmd,
                                                     std::vector<uint8_t> &endcmd) {
-   std::vector<uint8_t> temp = startcmd;
-   temp.insert(temp.end(), buf.begin(), buf.end());
-   temp.insert(temp.end(), endcmd.begin(), endcmd.end());
+   //see https://en.cppreference.com/w/cpp/container/vector/insert
+   // on item number 4) inserts elements from range [first, last) before pos with function format
+   // insert(pos, first, last)
+   
+   std::vector<uint8_t> temp = startcmd; //create temp and fills with startcmd
+   temp.insert(temp.end(), buf.begin(), buf.end()); //goes to pos at end of temp and fills with buf
+   temp.insert(temp.end(), endcmd.begin(), endcmd.end()); //go to pos at end of temp and fills with endcmd
 
    buf = temp;
 }

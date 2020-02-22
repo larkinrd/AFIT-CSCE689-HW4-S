@@ -16,7 +16,8 @@ public:
    ~TCPConn();
 
    // The current status of the connection
-   enum statustype { s_none, s_connecting, s_connected, s_datatx, s_datarx, s_waitack, s_hasdata };
+   enum statustype { s_none, s_connecting, s_connected, s_clienttxchallenge, s_svrrxchallenge, s_clientrxsvrchallengeresponse, 
+   s_datatx, s_datarx, s_waitack, s_hasdata };
 
    statustype getStatus() { return _status; };
 
@@ -72,24 +73,24 @@ public:
 
    // Functions to execute various stages of a connection 
    //MADE THEM PUBLIC... I DON'T SEE THE NEED TO MAKE EM PROTECTED
-   void sendSID();
-   void waitForSID();
+   void clientSendSID();
+   void serverWaitForSID();
+   void clientTxChallenge();
+   void clientRxChallengeResponse();
+   void svrRxChallenge();
    void transmitData();
    void waitForData();
    void awaitAck();
 protected:
    // Looks for commands in the data stream
-   std::vector<uint8_t>::iterator findCmd(std::vector<uint8_t> &buf,
-                                                   std::vector<uint8_t> &cmd);
+   std::vector<uint8_t>::iterator findCmd(std::vector<uint8_t> &buf, std::vector<uint8_t> &cmd);
    bool hasCmd(std::vector<uint8_t> &buf, std::vector<uint8_t> &cmd);
 
    // Gets the data between startcmd and endcmd strings and places in buf
-   bool getCmdData(std::vector<uint8_t> &buf, std::vector<uint8_t> &startcmd,
-                                                    std::vector<uint8_t> &endcmd);
+   bool getCmdData(std::vector<uint8_t> &buf, std::vector<uint8_t> &startcmd, std::vector<uint8_t> &endcmd);
 
    // Places startcmd and endcmd strings around the data in buf and returns it in buf
-   void wrapCmd(std::vector<uint8_t> &buf, std::vector<uint8_t> &startcmd,
-                                                    std::vector<uint8_t> &endcmd);
+   void wrapCmd(std::vector<uint8_t> &buf, std::vector<uint8_t> &startcmd, std::vector<uint8_t> &endcmd);
 
 
 private:

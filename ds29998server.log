@@ -1,132 +1,1336 @@
-Fri Feb 21 11:50:50 2020 Server started.
-Fri Feb 21 11:50:50 2020 Server listening on IP 127.0.0.1' port '9998'
-Fri Feb 21 11:50:55 2020 Connection from IP '127.0.0.1' PORT '49520' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:50:55 2020 Ack expected from data send, received something else. Node:ds19999
+Fri Feb 21 19:47:34 2020 Server started.
+Fri Feb 21 19:47:34 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 19:47:41 2020 Connection from IP '127.0.0.1' PORT '60870' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:47:41 2020 Connection from IP '127.0.0.1' PORT '60872' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:47:41 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:47:41 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:47:48 2020 Connection from IP '127.0.0.1' PORT '60886' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:47:48 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:47:48 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:47:48 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:47:55 2020 Connection from IP '127.0.0.1' PORT '60894' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:47:55 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:47:55 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:48:02 2020 Connection from IP '127.0.0.1' PORT '60902' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:09 2020 Connection from IP '127.0.0.1' PORT '60906' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:16 2020 Connection from IP '127.0.0.1' PORT '60912' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:23 2020 Connection from IP '127.0.0.1' PORT '60916' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:30 2020 Connection from IP '127.0.0.1' PORT '60924' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:37 2020 Connection from IP '127.0.0.1' PORT '60928' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:44 2020 Connection from IP '127.0.0.1' PORT '60936' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:51 2020 Connection from IP '127.0.0.1' PORT '60950' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:48:58 2020 Connection from IP '127.0.0.1' PORT '60954' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:05 2020 Connection from IP '127.0.0.1' PORT '60958' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:12 2020 Connection from IP '127.0.0.1' PORT '60962' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:19 2020 Connection from IP '127.0.0.1' PORT '60972' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:26 2020 Connection from IP '127.0.0.1' PORT '60976' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:33 2020 Connection from IP '127.0.0.1' PORT '60982' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:40 2020 Connection from IP '127.0.0.1' PORT '60990' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:49:47 2020 Connection from IP '127.0.0.1' PORT '60994' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:01 2020 Connection from IP '127.0.0.1' PORT '32772' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:08 2020 Connection from IP '127.0.0.1' PORT '32776' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:15 2020 Connection from IP '127.0.0.1' PORT '32780' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:22 2020 Connection from IP '127.0.0.1' PORT '32790' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:22 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:50:22 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:50:29 2020 Connection from IP '127.0.0.1' PORT '32800' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:36 2020 Connection from IP '127.0.0.1' PORT '32808' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:43 2020 Connection from IP '127.0.0.1' PORT '32816' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:50 2020 Connection from IP '127.0.0.1' PORT '32820' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:50:57 2020 Connection from IP '127.0.0.1' PORT '32824' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:04 2020 Connection from IP '127.0.0.1' PORT '32830' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:11 2020 Connection from IP '127.0.0.1' PORT '32834' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:18 2020 Connection from IP '127.0.0.1' PORT '32840' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:25 2020 Connection from IP '127.0.0.1' PORT '32848' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:32 2020 Connection from IP '127.0.0.1' PORT '32856' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:39 2020 Connection from IP '127.0.0.1' PORT '32860' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:46 2020 Connection from IP '127.0.0.1' PORT '32864' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:51:53 2020 Connection from IP '127.0.0.1' PORT '32868' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:52:00 2020 Connection from IP '127.0.0.1' PORT '32886' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:52:00 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:52:00 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:52:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 19:52:07 2020 Connection from IP '127.0.0.1' PORT '32890' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:52:07 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 19:52:07 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:52:07 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 19:52:34 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 19:52:34 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 19:52:34 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 19:52:34 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 19:52:34 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 19:52:34 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:52:34 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:52:34 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:52:34 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 19:52:34 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:55:43 2020 Server started.
+Fri Feb 21 19:55:43 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 19:55:50 2020 Connection from IP '127.0.0.1' PORT '32978' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:55:50 2020 Connection from IP '127.0.0.1' PORT '32976' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:55:50 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:55:50 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:55:50 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:55:50 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 19:55:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:55:50 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:55:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 19:55:50 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 19:55:57 2020 Connection from IP '127.0.0.1' PORT '32990' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:55:57 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:55:57 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:55:57 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:55:57 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:55:57 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 19:55:57 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:04 2020 Connection from IP '127.0.0.1' PORT '32998' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:04 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:56:04 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:04 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 19:56:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 19:56:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:04 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 19:56:11 2020 Connection from IP '127.0.0.1' PORT '33006' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:11 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:18 2020 Connection from IP '127.0.0.1' PORT '33018' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:18 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:18 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:25 2020 Connection from IP '127.0.0.1' PORT '33024' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:25 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:32 2020 Connection from IP '127.0.0.1' PORT '33028' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:32 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:32 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:39 2020 Connection from IP '127.0.0.1' PORT '33034' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:39 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:39 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:46 2020 Connection from IP '127.0.0.1' PORT '33038' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:46 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:46 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:56:53 2020 Connection from IP '127.0.0.1' PORT '33046' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:56:53 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:56:53 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:00 2020 Connection from IP '127.0.0.1' PORT '33050' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:00 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:07 2020 Connection from IP '127.0.0.1' PORT '33056' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:07 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:07 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:14 2020 Connection from IP '127.0.0.1' PORT '33060' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:14 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:21 2020 Connection from IP '127.0.0.1' PORT '33068' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:21 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:21 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:28 2020 Connection from IP '127.0.0.1' PORT '33074' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:28 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:28 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:35 2020 Connection from IP '127.0.0.1' PORT '33078' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:35 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:42 2020 Connection from IP '127.0.0.1' PORT '33082' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:42 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:42 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:49 2020 Connection from IP '127.0.0.1' PORT '33096' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:49 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:49 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:57:56 2020 Connection from IP '127.0.0.1' PORT '33106' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:57:56 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:57:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:03 2020 Connection from IP '127.0.0.1' PORT '33110' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:03 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:03 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:10 2020 Connection from IP '127.0.0.1' PORT '33114' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:10 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:10 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:17 2020 Connection from IP '127.0.0.1' PORT '33122' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:17 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:24 2020 Connection from IP '127.0.0.1' PORT '33126' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:24 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:24 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:31 2020 Connection from IP '127.0.0.1' PORT '33132' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:31 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:31 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:38 2020 Connection from IP '127.0.0.1' PORT '33156' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:38 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:38 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:45 2020 Connection from IP '127.0.0.1' PORT '33186' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:45 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:45 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:52 2020 Connection from IP '127.0.0.1' PORT '33190' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:52 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:52 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:58:59 2020 Connection from IP '127.0.0.1' PORT '33202' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:58:59 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:58:59 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:06 2020 Connection from IP '127.0.0.1' PORT '33226' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:06 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:06 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:13 2020 Connection from IP '127.0.0.1' PORT '33230' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:20 2020 Connection from IP '127.0.0.1' PORT '33234' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:20 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:20 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:27 2020 Connection from IP '127.0.0.1' PORT '33248' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:27 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:27 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:34 2020 Connection from IP '127.0.0.1' PORT '33256' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:34 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:34 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:41 2020 Connection from IP '127.0.0.1' PORT '33262' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:41 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:41 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:48 2020 Connection from IP '127.0.0.1' PORT '33266' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:48 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:48 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 19:59:55 2020 Connection from IP '127.0.0.1' PORT '33270' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 19:59:55 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 19:59:55 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 20:00:02 2020 Connection from IP '127.0.0.1' PORT '33274' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:00:02 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 20:00:02 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 20:00:09 2020 Connection from IP '127.0.0.1' PORT '33280' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:00:09 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:00:09 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:00:09 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 20:00:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 20:00:09 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 20:00:09 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 20:00:16 2020 Connection from IP '127.0.0.1' PORT '33286' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:00:16 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 20:00:16 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:00:16 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:00:16 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 20:00:16 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 20:00:16 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 20:05:48 2020 Server started.
+Fri Feb 21 20:05:48 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 20:05:54 2020 Connection from IP '127.0.0.1' PORT '33434' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:05:54 2020 Connection from IP '127.0.0.1' PORT '33436' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:05:54 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:05:54 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:05:54 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 20:05:54 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 20:05:54 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 20:05:54 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 20:05:56 2020 Connection from IP '127.0.0.1' PORT '33446' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:05:56 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 20:05:56 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 20:05:58 2020 Connection from IP '127.0.0.1' PORT '33454' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:00 2020 Connection from IP '127.0.0.1' PORT '33458' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:02 2020 Connection from IP '127.0.0.1' PORT '33464' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:04 2020 Connection from IP '127.0.0.1' PORT '33468' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:06 2020 Connection from IP '127.0.0.1' PORT '33472' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:08 2020 Connection from IP '127.0.0.1' PORT '33476' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:10 2020 Connection from IP '127.0.0.1' PORT '33480' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:12 2020 Connection from IP '127.0.0.1' PORT '33484' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:14 2020 Connection from IP '127.0.0.1' PORT '33488' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:16 2020 Connection from IP '127.0.0.1' PORT '33492' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:18 2020 Connection from IP '127.0.0.1' PORT '33496' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:20 2020 Connection from IP '127.0.0.1' PORT '33500' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:22 2020 Connection from IP '127.0.0.1' PORT '33504' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:24 2020 Connection from IP '127.0.0.1' PORT '33508' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:26 2020 Connection from IP '127.0.0.1' PORT '33512' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:28 2020 Connection from IP '127.0.0.1' PORT '33518' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:30 2020 Connection from IP '127.0.0.1' PORT '33522' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:32 2020 Connection from IP '127.0.0.1' PORT '33526' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:34 2020 Connection from IP '127.0.0.1' PORT '33532' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:36 2020 Connection from IP '127.0.0.1' PORT '33536' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:38 2020 Connection from IP '127.0.0.1' PORT '33540' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:40 2020 Connection from IP '127.0.0.1' PORT '33544' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:42 2020 Connection from IP '127.0.0.1' PORT '33548' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:44 2020 Connection from IP '127.0.0.1' PORT '33552' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:44 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 20:06:44 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 20:06:46 2020 Connection from IP '127.0.0.1' PORT '33558' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:48 2020 Connection from IP '127.0.0.1' PORT '33570' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:50 2020 Connection from IP '127.0.0.1' PORT '33576' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:52 2020 Connection from IP '127.0.0.1' PORT '33588' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:52 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 20:06:52 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:06:52 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 20:06:54 2020 Connection from IP '127.0.0.1' PORT '33596' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 20:06:54 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 20:06:54 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 20:06:54 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 20:06:57 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 20:06:57 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 20:06:57 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 20:06:57 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 20:06:57 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 20:06:57 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:25:21 2020 Server started.
+Fri Feb 21 21:25:21 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 21:25:26 2020 Connection from IP '127.0.0.1' PORT '34836' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:27 2020 Connection from IP '127.0.0.1' PORT '34846' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:27 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:25:27 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:25:27 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:25:27 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:25:29 2020 Connection from IP '127.0.0.1' PORT '34850' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:29 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:25:29 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:25:31 2020 Connection from IP '127.0.0.1' PORT '34858' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:33 2020 Connection from IP '127.0.0.1' PORT '34862' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:35 2020 Connection from IP '127.0.0.1' PORT '34868' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:37 2020 Connection from IP '127.0.0.1' PORT '34872' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:39 2020 Connection from IP '127.0.0.1' PORT '34876' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:41 2020 Connection from IP '127.0.0.1' PORT '34880' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:43 2020 Connection from IP '127.0.0.1' PORT '34884' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:45 2020 Connection from IP '127.0.0.1' PORT '34890' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:47 2020 Connection from IP '127.0.0.1' PORT '34894' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:49 2020 Connection from IP '127.0.0.1' PORT '34898' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:51 2020 Connection from IP '127.0.0.1' PORT '34902' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:53 2020 Connection from IP '127.0.0.1' PORT '34906' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:55 2020 Connection from IP '127.0.0.1' PORT '34910' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:57 2020 Connection from IP '127.0.0.1' PORT '34914' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:25:59 2020 Connection from IP '127.0.0.1' PORT '34920' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:01 2020 Connection from IP '127.0.0.1' PORT '34924' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:03 2020 Connection from IP '127.0.0.1' PORT '34928' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:05 2020 Connection from IP '127.0.0.1' PORT '34932' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:07 2020 Connection from IP '127.0.0.1' PORT '34936' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:09 2020 Connection from IP '127.0.0.1' PORT '34940' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:11 2020 Connection from IP '127.0.0.1' PORT '34944' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:13 2020 Connection from IP '127.0.0.1' PORT '34948' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:15 2020 Connection from IP '127.0.0.1' PORT '34954' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:15 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:26:15 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:26:17 2020 Connection from IP '127.0.0.1' PORT '34980' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:19 2020 Connection from IP '127.0.0.1' PORT '34984' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:21 2020 Connection from IP '127.0.0.1' PORT '34988' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:23 2020 Connection from IP '127.0.0.1' PORT '34992' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:25 2020 Connection from IP '127.0.0.1' PORT '35000' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:25 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:26:25 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:26:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:26:27 2020 Connection from IP '127.0.0.1' PORT '35008' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:26:27 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:26:27 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:26:27 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:26:29 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:26:29 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:26:29 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:26:29 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:26:29 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:26:29 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 21:26:29 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:26:29 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:26:29 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:26:29 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:40:29 2020 Server started.
+Fri Feb 21 21:40:29 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 21:40:35 2020 Connection from IP '127.0.0.1' PORT '35256' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:35 2020 Connection from IP '127.0.0.1' PORT '35258' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:35 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:40:35 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:40:37 2020 Connection from IP '127.0.0.1' PORT '35268' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:37 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:40:37 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:40:39 2020 Connection from IP '127.0.0.1' PORT '35272' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:41 2020 Connection from IP '127.0.0.1' PORT '35276' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:43 2020 Connection from IP '127.0.0.1' PORT '35282' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:45 2020 Connection from IP '127.0.0.1' PORT '35288' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:47 2020 Connection from IP '127.0.0.1' PORT '35292' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:49 2020 Connection from IP '127.0.0.1' PORT '35296' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:51 2020 Connection from IP '127.0.0.1' PORT '35300' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:53 2020 Connection from IP '127.0.0.1' PORT '35304' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:55 2020 Connection from IP '127.0.0.1' PORT '35308' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:57 2020 Connection from IP '127.0.0.1' PORT '35312' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:40:59 2020 Connection from IP '127.0.0.1' PORT '35320' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:01 2020 Connection from IP '127.0.0.1' PORT '35324' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:03 2020 Connection from IP '127.0.0.1' PORT '35328' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:05 2020 Connection from IP '127.0.0.1' PORT '35332' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:07 2020 Connection from IP '127.0.0.1' PORT '35336' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:09 2020 Connection from IP '127.0.0.1' PORT '35340' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:11 2020 Connection from IP '127.0.0.1' PORT '35346' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:13 2020 Connection from IP '127.0.0.1' PORT '35350' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:15 2020 Connection from IP '127.0.0.1' PORT '35354' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:17 2020 Connection from IP '127.0.0.1' PORT '35358' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:19 2020 Connection from IP '127.0.0.1' PORT '35362' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:21 2020 Connection from IP '127.0.0.1' PORT '35366' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:23 2020 Connection from IP '127.0.0.1' PORT '35370' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:23 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:41:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:41:25 2020 Connection from IP '127.0.0.1' PORT '35374' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:27 2020 Connection from IP '127.0.0.1' PORT '35378' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:29 2020 Connection from IP '127.0.0.1' PORT '35384' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:31 2020 Connection from IP '127.0.0.1' PORT '35388' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:33 2020 Connection from IP '127.0.0.1' PORT '35396' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:33 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:41:33 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:41:33 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:41:35 2020 Connection from IP '127.0.0.1' PORT '35404' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:41:35 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:41:35 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:41:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:41:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:41:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:41:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:41:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:41:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:41:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:41:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 21:41:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:41:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:41:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:46:40 2020 Server started.
+Fri Feb 21 21:46:40 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 21:46:45 2020 Connection from IP '127.0.0.1' PORT '35486' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:46 2020 Connection from IP '127.0.0.1' PORT '35492' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:46 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:46:46 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:46:48 2020 Connection from IP '127.0.0.1' PORT '35502' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:48 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:46:48 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:46:50 2020 Connection from IP '127.0.0.1' PORT '35508' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:52 2020 Connection from IP '127.0.0.1' PORT '35512' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:54 2020 Connection from IP '127.0.0.1' PORT '35516' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:56 2020 Connection from IP '127.0.0.1' PORT '35520' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:46:58 2020 Connection from IP '127.0.0.1' PORT '35524' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:00 2020 Connection from IP '127.0.0.1' PORT '35528' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:02 2020 Connection from IP '127.0.0.1' PORT '35534' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:04 2020 Connection from IP '127.0.0.1' PORT '35540' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:06 2020 Connection from IP '127.0.0.1' PORT '35544' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:08 2020 Connection from IP '127.0.0.1' PORT '35548' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:10 2020 Connection from IP '127.0.0.1' PORT '35552' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:12 2020 Connection from IP '127.0.0.1' PORT '35556' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:47:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:47:14 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:14 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:14 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:47:14 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 21:47:14 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:47:14 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:47:29 2020 Server started.
+Fri Feb 21 21:47:29 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 21:47:35 2020 Connection from IP '127.0.0.1' PORT '35570' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:35 2020 Connection from IP '127.0.0.1' PORT '35572' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:35 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:47:35 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:47:37 2020 Connection from IP '127.0.0.1' PORT '35582' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:37 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:47:37 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:47:37 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:47:39 2020 Connection from IP '127.0.0.1' PORT '35586' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:41 2020 Connection from IP '127.0.0.1' PORT '35590' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:43 2020 Connection from IP '127.0.0.1' PORT '35594' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:45 2020 Connection from IP '127.0.0.1' PORT '35598' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:47 2020 Connection from IP '127.0.0.1' PORT '35602' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:49 2020 Connection from IP '127.0.0.1' PORT '35606' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:51 2020 Connection from IP '127.0.0.1' PORT '35610' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:53 2020 Connection from IP '127.0.0.1' PORT '35614' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:55 2020 Connection from IP '127.0.0.1' PORT '35618' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:57 2020 Connection from IP '127.0.0.1' PORT '35624' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:47:59 2020 Connection from IP '127.0.0.1' PORT '35628' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:01 2020 Connection from IP '127.0.0.1' PORT '35632' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:03 2020 Connection from IP '127.0.0.1' PORT '35636' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:05 2020 Connection from IP '127.0.0.1' PORT '35642' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:07 2020 Connection from IP '127.0.0.1' PORT '35646' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:09 2020 Connection from IP '127.0.0.1' PORT '35650' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:11 2020 Connection from IP '127.0.0.1' PORT '35654' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:13 2020 Connection from IP '127.0.0.1' PORT '35658' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:15 2020 Connection from IP '127.0.0.1' PORT '35662' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:17 2020 Connection from IP '127.0.0.1' PORT '35666' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:19 2020 Connection from IP '127.0.0.1' PORT '35672' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:21 2020 Connection from IP '127.0.0.1' PORT '35676' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:23 2020 Connection from IP '127.0.0.1' PORT '35680' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:23 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:48:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:48:25 2020 Connection from IP '127.0.0.1' PORT '35684' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:27 2020 Connection from IP '127.0.0.1' PORT '35688' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:29 2020 Connection from IP '127.0.0.1' PORT '35692' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:31 2020 Connection from IP '127.0.0.1' PORT '35696' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:33 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:48:33 2020 Connection from IP '127.0.0.1' PORT '35704' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:33 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:48:33 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:48:33 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:48:35 2020 Connection from IP '127.0.0.1' PORT '35712' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:48:35 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:48:35 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:48:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:48:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:48:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:48:38 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:48:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:48:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:48:38 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 21:54:00 2020 Server started.
+Fri Feb 21 21:54:00 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 21:54:06 2020 Connection from IP '127.0.0.1' PORT '35830' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:06 2020 Connection from IP '127.0.0.1' PORT '35836' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:06 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:54:06 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:54:08 2020 Connection from IP '127.0.0.1' PORT '35840' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:08 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:54:08 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:54:10 2020 Connection from IP '127.0.0.1' PORT '35850' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:12 2020 Connection from IP '127.0.0.1' PORT '35854' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:14 2020 Connection from IP '127.0.0.1' PORT '35858' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:16 2020 Connection from IP '127.0.0.1' PORT '35862' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:18 2020 Connection from IP '127.0.0.1' PORT '35868' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:20 2020 Connection from IP '127.0.0.1' PORT '35874' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:22 2020 Connection from IP '127.0.0.1' PORT '35878' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:24 2020 Connection from IP '127.0.0.1' PORT '35882' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:26 2020 Connection from IP '127.0.0.1' PORT '35888' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:28 2020 Connection from IP '127.0.0.1' PORT '35892' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:30 2020 Connection from IP '127.0.0.1' PORT '35896' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:32 2020 Connection from IP '127.0.0.1' PORT '35900' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:34 2020 Connection from IP '127.0.0.1' PORT '35904' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:36 2020 Connection from IP '127.0.0.1' PORT '35908' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:38 2020 Connection from IP '127.0.0.1' PORT '35912' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:40 2020 Connection from IP '127.0.0.1' PORT '35916' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:42 2020 Connection from IP '127.0.0.1' PORT '35922' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:44 2020 Connection from IP '127.0.0.1' PORT '35926' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:46 2020 Connection from IP '127.0.0.1' PORT '35930' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:48 2020 Connection from IP '127.0.0.1' PORT '35934' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:50 2020 Connection from IP '127.0.0.1' PORT '35938' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:52 2020 Connection from IP '127.0.0.1' PORT '35942' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:54 2020 Connection from IP '127.0.0.1' PORT '35946' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:54 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 21:54:54 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 21:54:56 2020 Connection from IP '127.0.0.1' PORT '35950' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:54:58 2020 Connection from IP '127.0.0.1' PORT '35954' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:55:00 2020 Connection from IP '127.0.0.1' PORT '35958' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:55:02 2020 Connection from IP '127.0.0.1' PORT '35962' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:55:04 2020 Connection from IP '127.0.0.1' PORT '35970' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:55:04 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:55:04 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:55:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:55:06 2020 Connection from IP '127.0.0.1' PORT '35978' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 21:55:06 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 21:55:06 2020 Does not contain AUT string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 21:55:06 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 21:55:09 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:55:09 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:55:09 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:55:09 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:55:09 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 21:55:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:55:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:55:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 21:55:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 21:55:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:03:40 2020 Server started.
+Fri Feb 21 22:03:40 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:03:46 2020 Connection from IP '127.0.0.1' PORT '36094' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:46 2020 Connection from IP '127.0.0.1' PORT '36098' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:46 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:03:46 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:03:46 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:03:46 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:03:46 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:03:46 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:03:48 2020 Connection from IP '127.0.0.1' PORT '36104' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:48 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:03:48 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:03:48 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:03:48 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:03:48 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:03:50 2020 Connection from IP '127.0.0.1' PORT '36112' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:03:52 2020 Connection from IP '127.0.0.1' PORT '36116' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:52 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:03:54 2020 Connection from IP '127.0.0.1' PORT '36120' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:54 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:03:56 2020 Connection from IP '127.0.0.1' PORT '36124' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:03:58 2020 Connection from IP '127.0.0.1' PORT '36128' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:03:58 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:00 2020 Connection from IP '127.0.0.1' PORT '36132' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:02 2020 Connection from IP '127.0.0.1' PORT '36136' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:02 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:04 2020 Connection from IP '127.0.0.1' PORT '36140' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:06 2020 Connection from IP '127.0.0.1' PORT '36144' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:06 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:08 2020 Connection from IP '127.0.0.1' PORT '36148' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:08 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:10 2020 Connection from IP '127.0.0.1' PORT '36152' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:10 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:12 2020 Connection from IP '127.0.0.1' PORT '36156' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:12 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:14 2020 Connection from IP '127.0.0.1' PORT '36160' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:16 2020 Connection from IP '127.0.0.1' PORT '36166' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:16 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:18 2020 Connection from IP '127.0.0.1' PORT '36172' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:18 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:20 2020 Connection from IP '127.0.0.1' PORT '36178' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:20 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:22 2020 Connection from IP '127.0.0.1' PORT '36182' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:22 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:24 2020 Connection from IP '127.0.0.1' PORT '36186' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:24 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:26 2020 Connection from IP '127.0.0.1' PORT '36190' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:26 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:28 2020 Connection from IP '127.0.0.1' PORT '36194' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:28 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:30 2020 Connection from IP '127.0.0.1' PORT '36198' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:30 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:32 2020 Connection from IP '127.0.0.1' PORT '36202' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:32 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:34 2020 Connection from IP '127.0.0.1' PORT '36208' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:34 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:36 2020 Connection from IP '127.0.0.1' PORT '36212' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:36 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:38 2020 Connection from IP '127.0.0.1' PORT '36216' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:38 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:40 2020 Connection from IP '127.0.0.1' PORT '36220' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:40 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:42 2020 Connection from IP '127.0.0.1' PORT '36224' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:42 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:44 2020 Connection from IP '127.0.0.1' PORT '36230' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:44 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:44 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:04:44 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:04:44 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:04:44 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:04:46 2020 Connection from IP '127.0.0.1' PORT '36240' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:04:46 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:04:46 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:04:46 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:04:46 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:04:46 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:08:57 2020 Server started.
+Fri Feb 21 22:08:57 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:09:03 2020 Connection from IP '127.0.0.1' PORT '36308' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:03 2020 Connection from IP '127.0.0.1' PORT '36320' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:03 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:09:03 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:09:05 2020 Connection from IP '127.0.0.1' PORT '36328' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:05 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:09:05 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:09:07 2020 Connection from IP '127.0.0.1' PORT '36332' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:09 2020 Connection from IP '127.0.0.1' PORT '36336' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:11 2020 Connection from IP '127.0.0.1' PORT '36340' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:13 2020 Connection from IP '127.0.0.1' PORT '36344' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:15 2020 Connection from IP '127.0.0.1' PORT '36348' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:17 2020 Connection from IP '127.0.0.1' PORT '36352' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:19 2020 Connection from IP '127.0.0.1' PORT '36356' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:21 2020 Connection from IP '127.0.0.1' PORT '36360' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:23 2020 Connection from IP '127.0.0.1' PORT '36366' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:25 2020 Connection from IP '127.0.0.1' PORT '36370' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:27 2020 Connection from IP '127.0.0.1' PORT '36374' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:29 2020 Connection from IP '127.0.0.1' PORT '36378' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:31 2020 Connection from IP '127.0.0.1' PORT '36382' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:33 2020 Connection from IP '127.0.0.1' PORT '36386' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:35 2020 Connection from IP '127.0.0.1' PORT '36390' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:37 2020 Connection from IP '127.0.0.1' PORT '36394' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:39 2020 Connection from IP '127.0.0.1' PORT '36400' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:41 2020 Connection from IP '127.0.0.1' PORT '36406' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:43 2020 Connection from IP '127.0.0.1' PORT '36412' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:45 2020 Connection from IP '127.0.0.1' PORT '36416' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:47 2020 Connection from IP '127.0.0.1' PORT '36420' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:49 2020 Connection from IP '127.0.0.1' PORT '36424' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:51 2020 Connection from IP '127.0.0.1' PORT '36428' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:53 2020 Connection from IP '127.0.0.1' PORT '36432' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:55 2020 Connection from IP '127.0.0.1' PORT '36438' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:57 2020 Connection from IP '127.0.0.1' PORT '36442' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:09:59 2020 Connection from IP '127.0.0.1' PORT '36446' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:10:01 2020 Connection from IP '127.0.0.1' PORT '36454' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:10:01 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:10:01 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:10:03 2020 Connection from IP '127.0.0.1' PORT '36462' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:10:03 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:10:03 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:10:06 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:10:06 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:10:06 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:10:06 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:10:06 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:10:06 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:10:06 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:10:06 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:10:06 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:10:06 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:15:50 2020 Server started.
+Fri Feb 21 22:15:50 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:15:56 2020 Connection from IP '127.0.0.1' PORT '36562' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:15:56 2020 Connection from IP '127.0.0.1' PORT '36568' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:15:56 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:15:56 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:15:58 2020 Connection from IP '127.0.0.1' PORT '36574' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:15:58 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:15:58 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:16:00 2020 Connection from IP '127.0.0.1' PORT '36584' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:02 2020 Connection from IP '127.0.0.1' PORT '36590' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:04 2020 Connection from IP '127.0.0.1' PORT '36594' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:06 2020 Connection from IP '127.0.0.1' PORT '36598' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:08 2020 Connection from IP '127.0.0.1' PORT '36602' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:10 2020 Connection from IP '127.0.0.1' PORT '36606' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:12 2020 Connection from IP '127.0.0.1' PORT '36610' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:14 2020 Connection from IP '127.0.0.1' PORT '36614' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:16 2020 Connection from IP '127.0.0.1' PORT '36618' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:18 2020 Connection from IP '127.0.0.1' PORT '36622' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:20 2020 Connection from IP '127.0.0.1' PORT '36626' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:22 2020 Connection from IP '127.0.0.1' PORT '36630' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:24 2020 Connection from IP '127.0.0.1' PORT '36634' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:26 2020 Connection from IP '127.0.0.1' PORT '36638' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:28 2020 Connection from IP '127.0.0.1' PORT '36644' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:30 2020 Connection from IP '127.0.0.1' PORT '36648' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:32 2020 Connection from IP '127.0.0.1' PORT '36652' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:34 2020 Connection from IP '127.0.0.1' PORT '36656' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:36 2020 Connection from IP '127.0.0.1' PORT '36660' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:38 2020 Connection from IP '127.0.0.1' PORT '36664' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:40 2020 Connection from IP '127.0.0.1' PORT '36668' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:42 2020 Connection from IP '127.0.0.1' PORT '36672' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:44 2020 Connection from IP '127.0.0.1' PORT '36676' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:46 2020 Connection from IP '127.0.0.1' PORT '36682' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:48 2020 Connection from IP '127.0.0.1' PORT '36686' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:50 2020 Connection from IP '127.0.0.1' PORT '36692' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:52 2020 Connection from IP '127.0.0.1' PORT '36698' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:54 2020 Connection from IP '127.0.0.1' PORT '36708' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:54 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:16:54 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:16:56 2020 Connection from IP '127.0.0.1' PORT '36712' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:16:56 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:16:56 2020 In ClientRxChallenge, conn hasData(), has AUT string
+Fri Feb 21 22:16:59 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:16:59 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:16:59 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:16:59 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:16:59 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:16:59 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:16:59 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:16:59 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:16:59 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:16:59 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:17:54 2020 Server started.
+Fri Feb 21 22:17:54 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:18:00 2020 Connection from IP '127.0.0.1' PORT '36742' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:00 2020 Connection from IP '127.0.0.1' PORT '36744' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:00 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:18:00 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:18:00 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:18:00 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:18:00 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:18:02 2020 Connection from IP '127.0.0.1' PORT '36758' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:02 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:18:02 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:18:02 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:18:02 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:18:02 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:04 2020 Connection from IP '127.0.0.1' PORT '36762' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:06 2020 Connection from IP '127.0.0.1' PORT '36766' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:06 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:08 2020 Connection from IP '127.0.0.1' PORT '36770' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:08 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:10 2020 Connection from IP '127.0.0.1' PORT '36774' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:10 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:12 2020 Connection from IP '127.0.0.1' PORT '36780' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:12 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:14 2020 Connection from IP '127.0.0.1' PORT '36784' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:16 2020 Connection from IP '127.0.0.1' PORT '36788' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:16 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:18 2020 Connection from IP '127.0.0.1' PORT '36792' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:18 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:20 2020 Connection from IP '127.0.0.1' PORT '36796' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:20 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:22 2020 Connection from IP '127.0.0.1' PORT '36800' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:22 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:24 2020 Connection from IP '127.0.0.1' PORT '36804' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:24 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:26 2020 Connection from IP '127.0.0.1' PORT '36808' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:26 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:28 2020 Connection from IP '127.0.0.1' PORT '36812' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:28 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:30 2020 Connection from IP '127.0.0.1' PORT '36818' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:30 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:32 2020 Connection from IP '127.0.0.1' PORT '36822' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:32 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:34 2020 Connection from IP '127.0.0.1' PORT '36826' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:34 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:36 2020 Connection from IP '127.0.0.1' PORT '36830' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:36 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:38 2020 Connection from IP '127.0.0.1' PORT '36834' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:38 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:40 2020 Connection from IP '127.0.0.1' PORT '36838' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:40 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:42 2020 Connection from IP '127.0.0.1' PORT '36844' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:42 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:44 2020 Connection from IP '127.0.0.1' PORT '36850' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:44 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:46 2020 Connection from IP '127.0.0.1' PORT '36854' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:46 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:48 2020 Connection from IP '127.0.0.1' PORT '36860' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:48 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:50 2020 Connection from IP '127.0.0.1' PORT '36864' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:52 2020 Connection from IP '127.0.0.1' PORT '36868' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:52 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:54 2020 Connection from IP '127.0.0.1' PORT '36872' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:54 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:56 2020 Connection from IP '127.0.0.1' PORT '36876' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:18:58 2020 Connection from IP '127.0.0.1' PORT '36884' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:18:58 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:18:58 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:18:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:18:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:18:58 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:19:00 2020 Connection from IP '127.0.0.1' PORT '36892' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:19:00 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:19:00 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:19:00 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:19:00 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:19:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:03 2020 Server started.
+Fri Feb 21 22:20:03 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:20:09 2020 Connection from IP '127.0.0.1' PORT '36920' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:09 2020 Connection from IP '127.0.0.1' PORT '36922' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:09 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:09 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:09 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:09 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:20:09 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:20:09 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:20:09 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:20:09 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:20:11 2020 Connection from IP '127.0.0.1' PORT '36934' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:11 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:11 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:20:11 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:20:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:11 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:20:11 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:20:13 2020 Connection from IP '127.0.0.1' PORT '36940' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:13 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:15 2020 Connection from IP '127.0.0.1' PORT '36944' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:15 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:15 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:17 2020 Connection from IP '127.0.0.1' PORT '36948' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:17 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:19 2020 Connection from IP '127.0.0.1' PORT '36952' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:19 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:19 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:21 2020 Connection from IP '127.0.0.1' PORT '36956' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:21 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:21 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:23 2020 Connection from IP '127.0.0.1' PORT '36960' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:23 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:25 2020 Connection from IP '127.0.0.1' PORT '36964' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:25 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:27 2020 Connection from IP '127.0.0.1' PORT '36968' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:27 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:27 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:29 2020 Connection from IP '127.0.0.1' PORT '36972' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:29 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:29 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:31 2020 Connection from IP '127.0.0.1' PORT '36980' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:31 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:31 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:33 2020 Connection from IP '127.0.0.1' PORT '36986' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:33 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:33 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:35 2020 Connection from IP '127.0.0.1' PORT '36990' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:35 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:37 2020 Connection from IP '127.0.0.1' PORT '36994' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:37 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:37 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:41 2020 Connection from IP '127.0.0.1' PORT '36998' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:41 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:41 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:43 2020 Connection from IP '127.0.0.1' PORT '37002' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:43 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:43 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:45 2020 Connection from IP '127.0.0.1' PORT '37006' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:45 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:45 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:47 2020 Connection from IP '127.0.0.1' PORT '37010' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:47 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:47 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:49 2020 Connection from IP '127.0.0.1' PORT '37016' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:49 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:49 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:51 2020 Connection from IP '127.0.0.1' PORT '37020' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:51 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:51 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:53 2020 Connection from IP '127.0.0.1' PORT '37024' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:53 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:53 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:55 2020 Connection from IP '127.0.0.1' PORT '37028' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:55 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:55 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:57 2020 Connection from IP '127.0.0.1' PORT '37032' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:57 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:57 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:20:59 2020 Connection from IP '127.0.0.1' PORT '37036' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:20:59 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:20:59 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:21:01 2020 Connection from IP '127.0.0.1' PORT '37040' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:21:01 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:21:01 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:21:03 2020 Connection from IP '127.0.0.1' PORT '37044' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:21:03 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:21:03 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:21:05 2020 Connection from IP '127.0.0.1' PORT '37048' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:21:05 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:21:05 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:21:07 2020 Connection from IP '127.0.0.1' PORT '37052' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:21:07 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:21:07 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:21:07 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:21:07 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:21:07 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:21:07 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:21:09 2020 Connection from IP '127.0.0.1' PORT '37064' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:21:09 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:21:09 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:21:09 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:21:09 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:21:09 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:21:09 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:01 2020 Server started.
+Fri Feb 21 22:23:01 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:23:08 2020 Connection from IP '127.0.0.1' PORT '37088' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:08 2020 Connection from IP '127.0.0.1' PORT '37094' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:08 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:08 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:08 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:23:08 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:23:08 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:23:08 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:08 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:08 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:15 2020 Connection from IP '127.0.0.1' PORT '37106' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:15 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:15 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:15 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:23:15 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:23:15 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:15 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:22 2020 Connection from IP '127.0.0.1' PORT '37114' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:22 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:22 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:23:22 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:23:22 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:22 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:22 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:23:29 2020 Connection from IP '127.0.0.1' PORT '37122' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:29 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:29 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:36 2020 Connection from IP '127.0.0.1' PORT '37128' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:36 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:36 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:43 2020 Connection from IP '127.0.0.1' PORT '37134' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:43 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:43 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:50 2020 Connection from IP '127.0.0.1' PORT '37138' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:50 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:23:57 2020 Connection from IP '127.0.0.1' PORT '37144' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:23:57 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:23:57 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:04 2020 Connection from IP '127.0.0.1' PORT '37148' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:04 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:11 2020 Connection from IP '127.0.0.1' PORT '37164' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:11 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:18 2020 Connection from IP '127.0.0.1' PORT '37168' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:18 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:18 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:25 2020 Connection from IP '127.0.0.1' PORT '37172' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:25 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:32 2020 Connection from IP '127.0.0.1' PORT '37176' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:32 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:32 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:39 2020 Connection from IP '127.0.0.1' PORT '37184' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:39 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:39 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:46 2020 Connection from IP '127.0.0.1' PORT '37188' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:46 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:46 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:24:53 2020 Connection from IP '127.0.0.1' PORT '37196' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:24:53 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:24:53 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:00 2020 Connection from IP '127.0.0.1' PORT '37204' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:00 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:07 2020 Connection from IP '127.0.0.1' PORT '37212' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:07 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:07 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:14 2020 Connection from IP '127.0.0.1' PORT '37216' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:14 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:21 2020 Connection from IP '127.0.0.1' PORT '37222' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:21 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:21 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:28 2020 Connection from IP '127.0.0.1' PORT '37226' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:28 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:28 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:35 2020 Connection from IP '127.0.0.1' PORT '37232' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:35 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:42 2020 Connection from IP '127.0.0.1' PORT '37242' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:42 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:42 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:49 2020 Connection from IP '127.0.0.1' PORT '37246' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:49 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:49 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:25:56 2020 Connection from IP '127.0.0.1' PORT '37256' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:25:56 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:25:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:03 2020 Connection from IP '127.0.0.1' PORT '37260' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:03 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:26:03 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:10 2020 Connection from IP '127.0.0.1' PORT '37264' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:10 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:26:10 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:17 2020 Connection from IP '127.0.0.1' PORT '37270' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:17 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:26:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:17 2020 Server started.
+Fri Feb 21 22:26:17 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:26:23 2020 Connection from IP '127.0.0.1' PORT '37294' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:23 2020 Connection from IP '127.0.0.1' PORT '37300' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:23 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:50:55 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
-Fri Feb 21 11:50:56 2020 Connection from IP '127.0.0.1' PORT '49526' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:50:56 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:23 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:26:23 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 22:26:23 2020 Replication data possibly corrupted fromds19999
 
-Fri Feb 21 11:50:56 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
-Fri Feb 21 11:50:56 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
-Fri Feb 21 11:50:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:50:56 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
-Fri Feb 21 11:50:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:50:59 2020 Connection from IP '127.0.0.1' PORT '49536' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:50:59 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:23 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:26:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 22:26:23 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:26:25 2020 Connection from IP '127.0.0.1' PORT '37306' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:25 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:50:59 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:02 2020 Connection from IP '127.0.0.1' PORT '49546' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:02 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:25 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:26:25 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 22:26:25 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:26:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 22:26:27 2020 Connection from IP '127.0.0.1' PORT '37314' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:27 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:02 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:05 2020 Connection from IP '127.0.0.1' PORT '49550' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:05 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:27 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:29 2020 Connection from IP '127.0.0.1' PORT '37318' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:29 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:05 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:08 2020 Connection from IP '127.0.0.1' PORT '49556' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:08 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:29 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:31 2020 Connection from IP '127.0.0.1' PORT '37322' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:31 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:08 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:11 2020 Connection from IP '127.0.0.1' PORT '49562' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:11 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:31 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:33 2020 Connection from IP '127.0.0.1' PORT '37326' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:33 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:14 2020 Connection from IP '127.0.0.1' PORT '49568' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:14 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:33 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:35 2020 Connection from IP '127.0.0.1' PORT '37332' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:35 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:17 2020 Connection from IP '127.0.0.1' PORT '49572' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:17 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:37 2020 Connection from IP '127.0.0.1' PORT '37336' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:37 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:20 2020 Connection from IP '127.0.0.1' PORT '49576' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:20 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:37 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:39 2020 Connection from IP '127.0.0.1' PORT '37342' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:39 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:20 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:23 2020 Connection from IP '127.0.0.1' PORT '49582' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:23 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:39 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:41 2020 Connection from IP '127.0.0.1' PORT '37346' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:41 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:26 2020 Connection from IP '127.0.0.1' PORT '49588' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:26 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:41 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:43 2020 Connection from IP '127.0.0.1' PORT '37350' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:43 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:26 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:29 2020 Connection from IP '127.0.0.1' PORT '49592' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:29 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:43 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:45 2020 Connection from IP '127.0.0.1' PORT '37354' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:45 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:29 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:32 2020 Connection from IP '127.0.0.1' PORT '49596' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:32 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:45 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:47 2020 Connection from IP '127.0.0.1' PORT '37358' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:47 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:32 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:35 2020 Connection from IP '127.0.0.1' PORT '49602' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:35 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:47 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:49 2020 Connection from IP '127.0.0.1' PORT '37366' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:49 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:38 2020 Connection from IP '127.0.0.1' PORT '49608' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:38 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:49 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:51 2020 Connection from IP '127.0.0.1' PORT '37370' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:51 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:38 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:41 2020 Connection from IP '127.0.0.1' PORT '49612' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:41 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:51 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:53 2020 Connection from IP '127.0.0.1' PORT '37374' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:53 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:41 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:44 2020 Connection from IP '127.0.0.1' PORT '49618' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:44 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:53 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:55 2020 Connection from IP '127.0.0.1' PORT '37380' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:55 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:44 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:47 2020 Connection from IP '127.0.0.1' PORT '49622' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:47 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:55 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:57 2020 Connection from IP '127.0.0.1' PORT '37384' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:57 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:47 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:50 2020 Connection from IP '127.0.0.1' PORT '49626' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:50 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:57 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:26:59 2020 Connection from IP '127.0.0.1' PORT '37388' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:26:59 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:53 2020 Connection from IP '127.0.0.1' PORT '49630' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:53 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:26:59 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:01 2020 Connection from IP '127.0.0.1' PORT '37392' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:01 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:53 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:56 2020 Connection from IP '127.0.0.1' PORT '49638' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:56 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:01 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:03 2020 Connection from IP '127.0.0.1' PORT '37396' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:03 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:51:59 2020 Connection from IP '127.0.0.1' PORT '49642' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:51:59 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:03 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:05 2020 Connection from IP '127.0.0.1' PORT '37400' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:05 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:51:59 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:02 2020 Connection from IP '127.0.0.1' PORT '49650' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:52:02 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:05 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:07 2020 Connection from IP '127.0.0.1' PORT '37404' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:07 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:52:02 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:05 2020 Connection from IP '127.0.0.1' PORT '49658' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:52:05 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:07 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:09 2020 Connection from IP '127.0.0.1' PORT '37408' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:09 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:11 2020 Connection from IP '127.0.0.1' PORT '37412' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:11 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:52:05 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:08 2020 Connection from IP '127.0.0.1' PORT '49664' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:52:08 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:13 2020 Connection from IP '127.0.0.1' PORT '37416' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:13 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:52:08 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:11 2020 Connection from IP '127.0.0.1' PORT '49668' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:52:11 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:15 2020 Connection from IP '127.0.0.1' PORT '37420' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:15 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:52:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:14 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
-Fri Feb 21 11:52:14 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
-Fri Feb 21 11:52:14 2020 Connection from IP '127.0.0.1' PORT '49676' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:52:14 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
-Fri Feb 21 11:52:14 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:15 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:17 2020 Connection from IP '127.0.0.1' PORT '37424' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:17 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:52:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:17 2020 Connection from IP '127.0.0.1' PORT '49682' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
-Fri Feb 21 11:52:17 2020 Ack expected from data send, received something else. Node:ds39997
+Fri Feb 21 22:27:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:19 2020 Connection from IP '127.0.0.1' PORT '37428' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:19 2020 Replication data possibly corrupted fromds39997
 
-Fri Feb 21 11:52:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:17 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
-Fri Feb 21 11:52:17 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
-Fri Feb 21 11:52:17 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
-Fri Feb 21 11:52:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
-Fri Feb 21 11:52:19 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
-Fri Feb 21 11:52:19 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:27:19 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:21 2020 Connection from IP '127.0.0.1' PORT '37436' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:21 2020 Replication data possibly corrupted fromds39997
+
+Fri Feb 21 22:27:21 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:27:21 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 22:27:21 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:21 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:27:21 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 22:27:23 2020 Connection from IP '127.0.0.1' PORT '37444' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:27:23 2020 Replication data possibly corrupted fromds39997
+
+Fri Feb 21 22:27:23 2020 Connection from server ds19999 lost (IP: 127.0.0.1)
+Fri Feb 21 22:27:23 2020 Connection from server ds39997 lost (IP: 127.0.0.1)
+Fri Feb 21 22:27:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:27:23 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
+Fri Feb 21 22:27:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from 'ds29998'
+Fri Feb 21 22:28:27 2020 Server started.
+Fri Feb 21 22:28:27 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:28:33 2020 Connection from IP '127.0.0.1' PORT '37462' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:33 2020 Connection from IP '127.0.0.1' PORT '37468' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:33 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:28:33 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:28:33 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:28:33 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:28:33 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:28:33 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:35 2020 Connection from IP '127.0.0.1' PORT '37474' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:35 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:28:35 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:28:35 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:28:35 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:28:35 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:37 2020 Connection from IP '127.0.0.1' PORT '37482' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:37 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:39 2020 Connection from IP '127.0.0.1' PORT '37488' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:39 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:41 2020 Connection from IP '127.0.0.1' PORT '37492' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:41 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:43 2020 Connection from IP '127.0.0.1' PORT '37496' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:43 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:45 2020 Connection from IP '127.0.0.1' PORT '37500' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:45 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:47 2020 Connection from IP '127.0.0.1' PORT '37504' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:47 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:49 2020 Connection from IP '127.0.0.1' PORT '37508' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:49 2020 SID string from connecting client invalid format. Cannot authenticate.
+Fri Feb 21 22:28:49 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:51 2020 Connection from IP '127.0.0.1' PORT '37512' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:51 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:53 2020 Connection from IP '127.0.0.1' PORT '37516' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:53 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:55 2020 Connection from IP '127.0.0.1' PORT '37520' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:55 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:57 2020 Connection from IP '127.0.0.1' PORT '37526' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:57 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:28:59 2020 Connection from IP '127.0.0.1' PORT '37530' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:28:59 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:01 2020 Connection from IP '127.0.0.1' PORT '37534' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:01 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:03 2020 Connection from IP '127.0.0.1' PORT '37538' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:03 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:05 2020 Connection from IP '127.0.0.1' PORT '37542' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:05 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:07 2020 Connection from IP '127.0.0.1' PORT '37546' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:07 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:09 2020 Connection from IP '127.0.0.1' PORT '37550' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:09 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:11 2020 Connection from IP '127.0.0.1' PORT '37554' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:11 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:13 2020 Connection from IP '127.0.0.1' PORT '37558' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:13 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:15 2020 Connection from IP '127.0.0.1' PORT '37564' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:15 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:17 2020 Connection from IP '127.0.0.1' PORT '37568' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:17 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:19 2020 Connection from IP '127.0.0.1' PORT '37572' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:19 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:21 2020 Connection from IP '127.0.0.1' PORT '37576' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:21 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:23 2020 Connection from IP '127.0.0.1' PORT '37580' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:23 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:25 2020 Connection from IP '127.0.0.1' PORT '37584' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:25 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:27 2020 Connection from IP '127.0.0.1' PORT '37588' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:27 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:29 2020 Connection from IP '127.0.0.1' PORT '37592' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:29 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:31 2020 Connection from IP '127.0.0.1' PORT '37602' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:31 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:29:31 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:29:31 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:31 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:29:31 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:29:33 2020 Connection from IP '127.0.0.1' PORT '37608' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:29:33 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:29:33 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:29:33 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:29:33 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:29:33 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:36:52 2020 Server started.
+Fri Feb 21 22:36:52 2020 Server listening on IP 127.0.0.1' port '9998'
+Fri Feb 21 22:36:58 2020 Connection from IP '127.0.0.1' PORT '37728' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:36:58 2020 Connection from IP '127.0.0.1' PORT '37734' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:36:58 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:36:58 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:36:58 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:36:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:36:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:36:58 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from ''
+Fri Feb 21 22:37:00 2020 Connection from IP '127.0.0.1' PORT '37744' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:00 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:37:00 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:37:00 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:00 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:37:00 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:37:02 2020 Connection from IP '127.0.0.1' PORT '37750' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:02 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:04 2020 Connection from IP '127.0.0.1' PORT '37756' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:04 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:06 2020 Connection from IP '127.0.0.1' PORT '37760' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:06 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:08 2020 Connection from IP '127.0.0.1' PORT '37764' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:08 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:10 2020 Connection from IP '127.0.0.1' PORT '37768' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:10 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:12 2020 Connection from IP '127.0.0.1' PORT '37772' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:12 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:14 2020 Connection from IP '127.0.0.1' PORT '37776' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:14 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:16 2020 Connection from IP '127.0.0.1' PORT '37780' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:16 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:18 2020 Connection from IP '127.0.0.1' PORT '37784' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:18 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:20 2020 Connection from IP '127.0.0.1' PORT '37790' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:20 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:22 2020 Connection from IP '127.0.0.1' PORT '37794' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:22 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:24 2020 Connection from IP '127.0.0.1' PORT '37798' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:24 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:26 2020 Connection from IP '127.0.0.1' PORT '37802' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:26 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:28 2020 Connection from IP '127.0.0.1' PORT '37806' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:28 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:30 2020 Connection from IP '127.0.0.1' PORT '37810' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:30 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:32 2020 Connection from IP '127.0.0.1' PORT '37814' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:32 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:34 2020 Connection from IP '127.0.0.1' PORT '37818' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:34 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:36 2020 Connection from IP '127.0.0.1' PORT '37822' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:36 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:38 2020 Connection from IP '127.0.0.1' PORT '37826' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:38 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:40 2020 Connection from IP '127.0.0.1' PORT '37830' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:40 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:42 2020 Connection from IP '127.0.0.1' PORT '37836' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:42 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:44 2020 Connection from IP '127.0.0.1' PORT '37840' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:44 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:46 2020 Connection from IP '127.0.0.1' PORT '37844' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:46 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:48 2020 Connection from IP '127.0.0.1' PORT '37850' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:48 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:50 2020 Connection from IP '127.0.0.1' PORT '37854' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:50 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:52 2020 Connection from IP '127.0.0.1' PORT '37858' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:52 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:54 2020 Connection from IP '127.0.0.1' PORT '37862' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:54 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:56 2020 Connection from IP '127.0.0.1' PORT '37870' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:56 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:37:56 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:37:56 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:37:56 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:37:56 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:58 2020 Connection from IP '127.0.0.1' PORT '37874' and NodeID UNK ATT; Completed TCP 3-way handshake in TCPServer::handleSocket()
+Fri Feb 21 22:37:58 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:37:58 2020 Connection from server  lost (IP: 127.0.0.1)
+Fri Feb 21 22:37:58 2020 Node ID/IP/Port (not coded)'ds39997' lost connection from ''
+Fri Feb 21 22:37:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Fri Feb 21 22:37:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'

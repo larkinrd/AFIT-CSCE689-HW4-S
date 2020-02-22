@@ -158,16 +158,20 @@ TCPConn *TCPServer::handleSocket() {
       
 // STATUS=2 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
 
-      std::string isthiscorrectserverid;
-      if (QueueMgr* child = dynamic_cast<QueueMgr*>(this)){
-         isthiscorrectserverid = child->getServerID();
-      }
+      //std::string isthiscorrectserverid;
+      //if (QueueMgr* child = dynamic_cast<QueueMgr*>(this)){
+      //   isthiscorrectserverid = child->getServerID();
+      //}
 // STATUS=2 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
       //SET and SEND the servers SID
-      new_conn->setSvrID(isthiscorrectserverid.c_str());
-      new_conn->sendSID();
+      //new_conn->setSvrID(isthiscorrectserverid.c_str());
+      //new_conn->sendSID(); //s_status = datatx
 // STATUS=3 here std::cout << "TCPServer.cpp Status is: " << new_conn->getStatus();
       // Send an authentication string in cleartext
+
+      // LAST STEP set server to rx data
+      // I NEVER successfully receive data this way
+      //new_conn->waitForData();
                   
 
       return new_conn;
