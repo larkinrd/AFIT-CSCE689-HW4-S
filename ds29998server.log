@@ -1,34 +1,33 @@
-Sun Feb 23 11:05:14 2020 Server started.
-Sun Feb 23 11:05:14 2020 Server listening on IP 127.0.0.1' port '9998'
-Sun Feb 23 11:05:21 2020 Connection from IP '127.0.0.1' PORT '33116' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Sun Feb 23 11:05:21 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:05:21 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:05:21 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:05:28 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:05:28 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:05:35 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:05:35 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:05:42 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:05:42 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:05:49 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:05:49 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:05:56 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:05:56 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:03 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:03 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:10 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:10 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:17 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:17 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:24 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:24 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:31 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:31 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:38 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:38 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:45 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:45 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:52 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:52 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sun Feb 23 11:06:59 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sun Feb 23 11:06:59 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 15:07:10 2020 Server started.
+Sun Feb 23 15:07:10 2020 Server listening on IP 127.0.0.1' port '9998'
+Sun Feb 23 15:07:17 2020 Connection from IP '127.0.0.1' PORT '44038' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Sun Feb 23 15:07:17 2020 In clientSendSID()
+Sun Feb 23 15:07:17 2020 In clientSendSID()
+Sun Feb 23 15:07:17 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:17 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 15:07:17 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:07:24 2020 In clientSendSID()
+Sun Feb 23 15:07:24 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:24 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:07:31 2020 In clientSendSID()
+Sun Feb 23 15:07:31 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:31 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:07:38 2020 In clientSendSID()
+Sun Feb 23 15:07:38 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:38 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:07:45 2020 In clientSendSID()
+Sun Feb 23 15:07:45 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:45 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:07:52 2020 In clientSendSID()
+Sun Feb 23 15:07:52 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:52 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:07:59 2020 In clientSendSID()
+Sun Feb 23 15:07:59 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:07:59 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:08:06 2020 In clientSendSID()
+Sun Feb 23 15:08:06 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:08:06 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:08:13 2020 In clientSendSID()
+Sun Feb 23 15:08:13 2020 Connection from server ds29998 to node serverTRUSTSclient lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 15:08:13 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds29998'
+Sun Feb 23 15:08:20 2020 Connect to SID ds19999 failed when trying to send data. Retrying. Msg: TCP Connection failed!

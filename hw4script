@@ -31,7 +31,8 @@ rm ds*
 #for (( i=1;i<4;i++)); do
 #xfce4-terminal --title=SVR1DRN1 -e "./src/repsvr -p $port$i -t 10 -o svr$i.txt -v 3 ./data/SingleDroneN$1.bin"
 #sleep 5s
-xfce4-terminal --title=DS19999DRN1 -H -e "./src/repsvr -p 9999 -t 3 -o ds19999.txt -v 3 ./data/SingleDroneN1.bin"
-xfce4-terminal --title=DS29998DRN2 -H -e "./src/repsvr -p 9998 -t 3 -o ds19998.txt -v 3 ./data/SingleDroneN3.bin"
+### add a -H to keep terminal open
+xfce4-terminal --title=DS19999DRN1 -e "./src/repsvr -p 9999 -t 3 -o ds19999.txt -v 0 ./data/SingleDroneN1.bin"
+xfce4-terminal --title=DS29998DRN2 -e "./src/repsvr -p 9998 -t 3 -o ds19998.txt -v 0 ./data/SingleDroneN3.bin"
 #xfce4-terminal --title=DS39997DRN3 -e "./src/repsvr -p 9997 -t 3 -o ds19997.txt -v 3 ./data/SingleDroneN2.bin"
 #done
