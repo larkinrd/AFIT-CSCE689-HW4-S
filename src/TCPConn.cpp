@@ -55,38 +55,47 @@ TCPConn::TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int v
 {
    // prep some tools to search for command sequences in data
    uint8_t slash = (uint8_t) '/';
-   c_rep.push_back((uint8_t) '<');
-   c_rep.push_back((uint8_t) 'R');
-   c_rep.push_back((uint8_t) 'E');
-   c_rep.push_back((uint8_t) 'P');
-   c_rep.push_back((uint8_t) '>');
+   c_rep.push_back((uint8_t) '<');    c_rep.push_back((uint8_t) 'R');    c_rep.push_back((uint8_t) 'E');
+   c_rep.push_back((uint8_t) 'P');    c_rep.push_back((uint8_t) '>');
 
    c_endrep = c_rep;
    c_endrep.insert(c_endrep.begin()+1, 1, slash);
 
-   c_ack.push_back((uint8_t) '<');
-   c_ack.push_back((uint8_t) 'A');
-   c_ack.push_back((uint8_t) 'C');
-   c_ack.push_back((uint8_t) 'K');
-   c_ack.push_back((uint8_t) '>');
+   c_ack.push_back((uint8_t) '<');    c_ack.push_back((uint8_t) 'A');    c_ack.push_back((uint8_t) 'C');
+   c_ack.push_back((uint8_t) 'K');    c_ack.push_back((uint8_t) '>');
 
-   c_auth.push_back((uint8_t) '<');
-   c_auth.push_back((uint8_t) 'A');
-   c_auth.push_back((uint8_t) 'U');
-   c_auth.push_back((uint8_t) 'T');
-   c_auth.push_back((uint8_t) '>');
+   c_auth.push_back((uint8_t) '<');    c_auth.push_back((uint8_t) 'A');    c_auth.push_back((uint8_t) 'U');
+   c_auth.push_back((uint8_t) 'T');    c_auth.push_back((uint8_t) 'H');    c_auth.push_back((uint8_t) '>');
 
    c_endauth = c_auth;
    c_endauth.insert(c_endauth.begin()+1, 1, slash);
 
-   c_sid.push_back((uint8_t) '<');
-   c_sid.push_back((uint8_t) 'S');
-   c_sid.push_back((uint8_t) 'I');
-   c_sid.push_back((uint8_t) 'D');
-   c_sid.push_back((uint8_t) '>');
+   c_sid.push_back((uint8_t) '<');    c_sid.push_back((uint8_t) 'S');    c_sid.push_back((uint8_t) 'I');
+   c_sid.push_back((uint8_t) 'D');    c_sid.push_back((uint8_t) '>');
 
    c_endsid = c_sid;
    c_endsid.insert(c_endsid.begin()+1, 1, slash);
+   
+   //CHAL for sending the challenge
+   c_chal.push_back((uint8_t) '<');    c_chal.push_back((uint8_t) 'C');    c_chal.push_back((uint8_t) 'H');
+   c_chal.push_back((uint8_t) 'A');    c_chal.push_back((uint8_t) 'L');    c_chal.push_back((uint8_t) '>');
+
+   c_endchal = c_chal;
+   c_endchal.insert(c_endchal.begin()+1, 1, slash);
+   
+   //RESP for sending an ENCRYPTED response to the challenge
+   c_resp.push_back((uint8_t) '<');    c_resp.push_back((uint8_t) 'R');    c_resp.push_back((uint8_t) 'E');
+   c_resp.push_back((uint8_t) 'S');    c_resp.push_back((uint8_t) 'P');    c_resp.push_back((uint8_t) '>');
+
+   c_endresp = c_resp;
+   c_endresp.insert(c_endresp.begin()+1, 1, slash);
+   
+   //TIME for sending system time to synchnize clocks... DO FOR EACH CONNECTION OBJECT? OR SERVER OBJECT?
+   c_time.push_back((uint8_t) '<');    c_time.push_back((uint8_t) 'T');    c_time.push_back((uint8_t) 'I');
+   c_time.push_back((uint8_t) 'M');    c_time.push_back((uint8_t) 'E');    c_time.push_back((uint8_t) '>');
+
+   c_endtime = c_time;
+   c_endtime.insert(c_endtime.begin()+1, 1, slash);
 }
 
 
@@ -108,7 +117,7 @@ bool TCPConn::accept(SocketFD &server) {
 
 
    // Set the state as waiting for the authorization packet
-   _status = s_connected;
+   _status = s_serveracceptedconnection;
    _connected = true;
    return results;
 }
@@ -189,47 +198,33 @@ void TCPConn::handleConnection() {
    try {
       switch (_status) {
 
-         // Client: Just connected, send our SID
-         case s_connecting:
-            clientSendSID();
-            break;
+         // Client: Initiated connection and we "ASSUME" success!!!
+         // //send UNencrypted <TIME><SID><CHAL>
+         case s_clientconnecting: oneClientSendsCHAL(); break;
 
-         // Server: Wait for the SID from a newly-connected client, then send our SID
-         case s_connected:
-            serverWaitForSID();
-            break;
+         // Server: //send ENcrypted <TIME><SID><RESP>
+         case s_serveracceptedconnection: twoSvrSendsRESPtoCHAL(); break;
 
-         //client - tx challenge to server 
-         case s_clienttxchallenge:
-            clientTxChallenge();
-            break;
-         //server - encrypt challenge and send to client
-         //   ??????    - tx challenge to client
-         case s_svrrxchallenge:
-            svrRxChallenge();
-            break;
+         //client: //if Good goto FIVE and prcess Svrs CHALL
+         case s_threeclient: threeClientProcRESP(); break;
          
-         //client - verify server response to challenge (decrypt), go to tx encrypted data client -> server
-         //  ????     - encrypt challenge and send to server
-         case s_clientrxsvrchallengeresponse:
-            clientRxChallengeResponse();
-            break;
-         //server - very client response to challenge (decrypt), to to rx encrypted data from client
+         //Server: send UNencrypted <TIME><SID><CHAL>
+         case s_fourserver: fourSvrSendsCHAL(); break;
+         
+         //Client: send ENcrypted <TIME><SID><RESP>
+         case s_fiveclient: fiveClientSendsRESPtoCHAL(); break;
 
+         //Server: if good go to eight and receive REP dat form client
+         case s_sixserver: sixSvrProcRESP(); break;
+         
          // Client: connecting user - replicate data
-         case s_datatx:
-            transmitData();
-            break;
+         case s_sevendatatx: sevenClientTxREPData(); break;
 
          // Server: Receive data from the client
-         case s_datarx:
-            waitForData();
-            break;
+         case s_eightdatarx: eigthSvrRxREPData(); break;
    
          // Client: Wait for acknowledgement that data sent was received before disconnecting
-         case s_waitack:
-            awaitAck();
-            break;
+         case s_ninewaitack: nineClientRxAck(); break;
          
          // Server: Data received and conn disconnected, but waiting for the data to be retrieved
          case s_hasdata:
@@ -247,236 +242,23 @@ void TCPConn::handleConnection() {
 
 }
 
-/**********************************************************************************************
- * sendSID()  - Client: after a connection, client sends its Server ID to the server
- *
- *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
- **********************************************************************************************/
+   void TCPConn::oneClientSendsCHAL() {_status = s_threeclient;} //send UNencrypted <TIME><SID><CHAL>
+   void TCPConn::twoSvrSendsRESPtoCHAL(){_status = s_fourserver;} //send ENcrypted <TIME><SID><RESP>
+   void TCPConn::threeClientProcRESP(){_status = s_fiveclient;} //if Good goto FIVE and prcess Svrs CHALL
+   void TCPConn::fourSvrSendsCHAL(){_status = s_sixserver;} //send UNencrypted <TIME><SID><CHAL>
+   void TCPConn::fiveClientSendsRESPtoCHAL(){_status = s_sevendatatx;} //send ENcrypted <TIME><SID><RESP>
+   void TCPConn::sixSvrProcRESP(){_status = s_eightdatarx;} //if good go to eight and receive REP dat form client
 
-void TCPConn::clientSendSID() {
 
-            std::stringstream msg;
-      msg << "In clientSendSID()";
-      _server_log.writeLog(msg.str().c_str());
 
-   std::vector<uint8_t> buf(_svr_id.begin(), _svr_id.end());
-   wrapCmd(buf, c_sid, c_endsid);
-   sendData(buf);
-
-   //_status = s_datatx;//this is client goto clientsendchallenge
-   _status = s_clienttxchallenge;
-   //_status = s_txrxchallenge;
-}
-
-/**********************************************************************************************
- * waitForSID()  - receives the SID and sends our SID
- *
- *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
- **********************************************************************************************/
-
-void TCPConn::serverWaitForSID() {
-
-   // If data on the socket, should be our Auth string from our host server
-   if (_connfd.hasData()) {
-      std::vector<uint8_t> buf;
-
-      if (!getData(buf))
-         return;
-
-      if (!getCmdData(buf, c_sid, c_endsid)) {
-         std::stringstream msg;
-         msg << "SID string from connecting client invalid format. Cannot authenticate.";
-         _server_log.writeLog(msg.str().c_str());
-         disconnect();
-         return;
-      }
-
-      std::string node(buf.begin(), buf.end());
-      setNodeID(node.c_str());
-
-      // Send our Node ID... sends a blank node
-      buf.assign(_svr_id.begin(), _svr_id.end());
-      wrapCmd(buf, c_sid, c_endsid);
-      sendData(buf);
-
-      //_status = s_datarx;//this is server goto receive challenge
-      std::stringstream msg;
-      msg << "In serverWaitForSID()";
-      _server_log.writeLog(msg.str().c_str());
-
-      _status = s_svrrxchallenge;
-      //_status = s_txrxchallenge;
-   }
-}
-
-void TCPConn::clientTxChallenge(){
-
-//Server responded with their SID and now it is time ot transmit the challenge to the server
-/*if (_connfd.hasData()) {
-      std::vector<uint8_t> buf;
-
-      //if (!getEncryptedData(buf))
-      if (!getData(buf))
-         return;
-
-      //the fact that i send the svr id is just extra, we care about the AUT challenge
-      if (!getCmdData(buf, c_sid, c_endsid)) {
-         std::stringstream msg;
-         msg << "Msg from connection client DOES NOT conatian <SID></SID> from server. Cant Tx Challenge";
-         _server_log.writeLog(msg.str().c_str());
-         disconnect();
-         return;
-      }
-
-*/    
-      std::vector<uint8_t> buf;  
-      buf.assign(_svr_id.begin(), _svr_id.end());
-      wrapCmd(buf, c_sid, c_endsid);
-      std::string _authstr = random_string(10); 
-      std::cout << "MY RANDOM STRING IS: " << _authstr;
-      std::vector<uint8_t> sendchallenge(_authstr.begin(), _authstr.end());
-      wrapCmd(sendchallenge, c_auth, c_endauth);
-      buf.insert(buf.end(), sendchallenge.begin(), sendchallenge.end());
-            
-      std::cout << "330 std::vector<uint8_t> buf in clientTxChallenge() is: ";
-      for (int i=0; i<buf.size(); i++){
-      std::cout << buf.at(i); } std::cout << "\n";
-      
-      //sendEncryptedData(buf);
-      sendData(buf);
-      std::stringstream msg;
-      msg << "In clientTxChallenge()";
-      _server_log.writeLog(msg.str().c_str());
-
-      _status = s_clientrxsvrchallengeresponse;
-  // }
-}
-
-void TCPConn::svrRxChallenge(){
-
-/*
-//server previously sent its sid, now receiving the challenge, will encrypt it and send back to client 
-   if (_connfd.hasData()) {
-      std::vector<uint8_t> buf;
-
-      //if (!getEncryptedData(buf))
-      if (!getData(buf))
-         return;
-
-      //the fact that i send the svr id is just extra, we care about the AUT challenge
-      //remember getCmdData strips the buffer of other stuff
-      if (!getCmdData(buf, c_auth, c_endauth)) {
-         std::stringstream msg;
-         msg << "Msg from connection client DOES NOT conatian <AUT></AUT>. Cannot authenticate.";
-         _server_log.writeLog(msg.str().c_str());
-         disconnect();
-         return;
-      }
-*/
-      std::vector<uint8_t> buf;
-      if (!getData(buf))
-         return;
-      
-      getCmdData(buf, c_auth, c_endauth);
-      //ENCRYPT THE CHALLENGE AND SEND BACK TO CLIENT, buf contains only what is between the AUT tags
-      // REUSE WHEN WANTING TO PRINT OUT A <UINT8_T> OBJECT 
-      //std::cout << "366 std::vector<uint8_t> buf in svrRxChallenge() is: ";
-      //for (int i=0; i<buf.size(); i++){
-      //std::cout << buf.at(i); } std::cout << "\n";
-      // REUSE WHEN WANTING TO PRINT OUT A <UINT8_T> OBJECT 
-
-      //We got the challenge and put it in buffer, we wrap in AUT tags
-      wrapCmd(buf, c_auth, c_endauth);
-
-      //We add the SID to the beginning of the buffer for good measure
-      //REMEMBER the datatx function is looking for SID tags
-      buf.insert(buf.begin(), c_sid.begin(), c_sid.end());
-      buf.insert(buf.begin(), _svr_id.begin(), _svr_id.end());
-      buf.insert(buf.begin(), c_endsid.begin(), c_endsid.end());
-      
-      //sendEncryptedData(buf);
-      sendData(buf);
- 
-   std::stringstream msg;
-   msg << "In svrRxChallenge()";
-   _server_log.writeLog(msg.str().c_str());
-      _status = s_datarx;
-   //}
-}
-
-void TCPConn::clientRxChallengeResponse(){
-
-/*      
-// If data on the socket, should contian an encrypted packet with <AUT>_authstring</AUT> and <SID>_svr_id</SID>
-   if (_connfd.hasData()) {
-      std::vector<uint8_t> buf;
-
-      //if (!getEncryptedData(buf))
-      if (!getData(buf))
-         return;
-
-      //Since I have multiple tags and getCmdData strips info out of the returned buffer... i need a copy
-      std::vector<uint8_t> copyofbuf = buf;
-
-      //First grab whats between the <AUT> tags in buf
-      if (!getCmdData(buf, c_auth, c_endauth)) {
-         std::stringstream msg;
-         msg << "Msg from connection client DOES NOT conatin <AUT></AUT>. Cannot authenticate.";
-         _server_log.writeLog(msg.str().c_str());
-         disconnect();
-         return;
-      }   
-*/
-     std::vector<uint8_t> buf;  
-
-    // if (!getData(buf))
-    //     return;
-
-// REUSE WHEN WANTING TO PRINT OUT A <UINT8_T> OBJECT 
-      std::cout << "\n\n436 std::vector<uint8_t> buf in clientRxChallengeResponse() is: ";
-      for (int i=0; i<buf.size(); i++){
-      std::cout << buf.at(i); } std::cout << "\n";
-      // REUSE WHEN WANTING TO PRINT OUT A <UINT8_T> OBJECT 
-
- 
-     std::vector<uint8_t> copyofbuf = buf;    
-      //packet contains <AUT> tags and has already been decrypted, move <unit8_t> buf into a string
-      //for comparison against _authstr
-      std::string challengeresponsefromsvr;
-      for (int i=0; i<buf.size(); i++){ challengeresponsefromsvr.at(i) = buf.at(i); }
-      std::cout << "challengeresponsefromsvr contains: " << challengeresponsefromsvr << std::endl;
-      if (_authstr.compare(challengeresponsefromsvr) == 0) {
-         std::cout << "\n\nSTRINGS ARE EQUAL... YAY!!!\n\n";
-         //get the SID 
-         _status = s_datatx;
-      } else {
-         std::cout << "CLIENT DID NOT USE PROPER ENCRYPTION KEY";
-      }
-    
-    //else... GO TO NEXT STEP FOR NOW?
-   //_status = s_datatx;
-   //}
-
-   //restore buf back to original state wiht both <SID> and <AUT> tags
-      buf=copyofbuf; 
-     
-   std::stringstream msg;
-   msg << "In clientRxChallengeResponse()";
-   _server_log.writeLog(msg.str().c_str());
-      
-   _status = s_datatx;
-   //transmitData();
-   //}
-}
 
 
 /**********************************************************************************************
  * transmitData()  - receives the SID from the server and transmits data
- *
  *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
  **********************************************************************************************/
 
-void TCPConn::transmitData() {
+void TCPConn::sevenClientTxREPData() {
 
 /*
    // If data on the socket, should be our Auth string from our host server
@@ -507,7 +289,7 @@ void TCPConn::transmitData() {
                       " and sending replication data.\n";
 
       // Wait for their response
-      _status = s_waitack;
+      _status = s_ninewaitack;
    //}
 }
 
@@ -519,7 +301,7 @@ void TCPConn::transmitData() {
  *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
  **********************************************************************************************/
 
-void TCPConn::waitForData() {
+void TCPConn::eigthSvrRxREPData() {
 
 //std::cout << "\n Entered TCPConn::waitForData";
    // If data on the socket, should be replication data
@@ -551,7 +333,7 @@ void TCPConn::waitForData() {
 
 
       disconnect();
-      _status = s_hasdata;
+      _status = s_hasdata; // WHAT IS THIS?
    }
 }
 
@@ -562,7 +344,7 @@ void TCPConn::waitForData() {
  *    Throws: socket_error for network issues, runtime_error for unrecoverable issues
  **********************************************************************************************/
 
-void TCPConn::awaitAck() {
+void TCPConn::nineClientRxAck() {
 
    // Should have the ack message
    if (_connfd.hasData()) {
@@ -771,8 +553,8 @@ void TCPConn::getInputData(std::vector<uint8_t> &buf) {
 
 void TCPConn::connect(const char *ip_addr, unsigned short port) {
 
-   // Set the status to connecting
-   _status = s_connecting;
+   // a CLIENT Connects() and a SERVER Listens() & Accepts(); set status to clientconnecting
+   _status = s_clientconnecting;
 
    // Try to connect
    if (!_connfd.connectTo(ip_addr, port))
@@ -784,7 +566,7 @@ void TCPConn::connect(const char *ip_addr, unsigned short port) {
 // Same as above, but ip_addr and port are in network (big endian) format
 void TCPConn::connect(unsigned long ip_addr, unsigned short port) {
    // Set the status to connecting
-   _status = s_connecting;
+   _status = s_clientconnecting;
 
    if (!_connfd.connectTo(ip_addr, port))
       throw socket_error("TCP Connection failed!");

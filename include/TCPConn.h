@@ -16,8 +16,8 @@ public:
    ~TCPConn();
 
    // The current status of the connection
-   enum statustype { s_none, s_connecting, s_connected, s_clienttxchallenge, s_svrrxchallenge, s_clientrxsvrchallengeresponse, 
-   s_datatx, s_datarx, s_waitack, s_hasdata };
+   enum statustype { s_none, s_clientconnecting, s_serveracceptedconnection, s_threeclient, s_fourserver,   
+   s_fiveclient, s_sixserver, s_sevendatatx, s_eightdatarx, s_ninewaitack, s_hasdata };
 
    statustype getStatus() { return _status; };
 
@@ -70,17 +70,16 @@ public:
    // Assign outgoing data and sets up the socket to manage the transmission
    void assignOutgoingData(std::vector<uint8_t> &data);
 
-   //void gen_random(std::string &s, const int len);
-   // Functions to execute various stages of a connection 
    //MADE THEM PUBLIC... I DON'T SEE THE NEED TO MAKE EM PROTECTED
-   void clientSendSID();
-   void serverWaitForSID();
-   void clientTxChallenge();
-   void clientRxChallengeResponse();
-   void svrRxChallenge();
-   void transmitData();
-   void waitForData();
-   void awaitAck();
+   void oneClientSendsCHAL(); //send UNencrypted <TIME><SID><CHAL>
+   void twoSvrSendsRESPtoCHAL(); //send ENcrypted <TIME><SID><RESP>
+   void threeClientProcRESP(); //if Good goto FIVE and prcess Svrs CHALL
+   void fourSvrSendsCHAL(); //send UNencrypted <TIME><SID><CHAL>
+   void fiveClientSendsRESPtoCHAL(); //send ENcrypted <TIME><SID><RESP>
+   void sixSvrProcRESP(); //if good go to eight and receive REP dat form client
+   void sevenClientTxREPData(); 
+   void eigthSvrRxREPData();
+   void nineClientRxAck();
 
 protected:
    // Looks for commands in the data stream
@@ -98,7 +97,7 @@ private:
 
    bool _connected = false;
 
-   std::vector<uint8_t> c_rep, c_endrep, c_auth, c_endauth, c_ack, c_sid, c_endsid;
+   std::vector<uint8_t> c_rep, c_endrep, c_auth, c_endauth, c_ack, c_sid, c_endsid, c_chal, c_endchal, c_resp, c_endresp, c_time, c_endtime;
 
    statustype _status = s_none;
 

@@ -1,101 +1,34 @@
-Sat Feb 22 15:27:06 2020 Server started.
-Sat Feb 22 15:27:06 2020 Server listening on IP 127.0.0.1' port '9998'
-Sat Feb 22 15:27:13 2020 Connection from IP '127.0.0.1' PORT '56432' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Sat Feb 22 15:27:13 2020 In serverWaitForSID()
-Sat Feb 22 15:27:13 2020 In clientSendSID()
-Sat Feb 22 15:27:13 2020 In svrRxChallenge()
-Sat Feb 22 15:27:13 2020 In clientTxChallenge()
-Sat Feb 22 15:27:13 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:13 2020 Node ID/IP/Port (not coded)'ds19999' lost connection from 'ds29998'
-Sat Feb 22 15:27:13 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:13 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:27:20 2020 In clientSendSID()
-Sat Feb 22 15:27:20 2020 In clientTxChallenge()
-Sat Feb 22 15:27:20 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:20 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:20 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:27:27 2020 In clientSendSID()
-Sat Feb 22 15:27:27 2020 In clientTxChallenge()
-Sat Feb 22 15:27:27 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:27 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:27 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:27:34 2020 In clientSendSID()
-Sat Feb 22 15:27:34 2020 In clientTxChallenge()
-Sat Feb 22 15:27:34 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:34 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:34 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:27:41 2020 In clientSendSID()
-Sat Feb 22 15:27:41 2020 In clientTxChallenge()
-Sat Feb 22 15:27:41 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:41 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:41 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:27:48 2020 In clientSendSID()
-Sat Feb 22 15:27:48 2020 In clientTxChallenge()
-Sat Feb 22 15:27:48 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:48 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:48 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:27:55 2020 In clientSendSID()
-Sat Feb 22 15:27:55 2020 In clientTxChallenge()
-Sat Feb 22 15:27:55 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:27:55 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:27:55 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:02 2020 In clientSendSID()
-Sat Feb 22 15:28:02 2020 In clientTxChallenge()
-Sat Feb 22 15:28:02 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:02 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:02 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:09 2020 In clientSendSID()
-Sat Feb 22 15:28:09 2020 In clientTxChallenge()
-Sat Feb 22 15:28:09 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:09 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:09 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:16 2020 In clientSendSID()
-Sat Feb 22 15:28:16 2020 In clientTxChallenge()
-Sat Feb 22 15:28:16 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:16 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:16 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:23 2020 In clientSendSID()
-Sat Feb 22 15:28:23 2020 In clientTxChallenge()
-Sat Feb 22 15:28:23 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:23 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:23 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:30 2020 In clientSendSID()
-Sat Feb 22 15:28:30 2020 In clientTxChallenge()
-Sat Feb 22 15:28:30 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:30 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:30 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:37 2020 In clientSendSID()
-Sat Feb 22 15:28:37 2020 In clientTxChallenge()
-Sat Feb 22 15:28:37 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:37 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:37 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:44 2020 In clientSendSID()
-Sat Feb 22 15:28:44 2020 In clientTxChallenge()
-Sat Feb 22 15:28:44 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:44 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:44 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:51 2020 In clientSendSID()
-Sat Feb 22 15:28:51 2020 In clientTxChallenge()
-Sat Feb 22 15:28:51 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:51 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:51 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:28:58 2020 In clientSendSID()
-Sat Feb 22 15:28:58 2020 In clientTxChallenge()
-Sat Feb 22 15:28:58 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:28:58 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:28:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:29:05 2020 In clientSendSID()
-Sat Feb 22 15:29:05 2020 In clientTxChallenge()
-Sat Feb 22 15:29:05 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:29:05 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:29:05 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:29:12 2020 In clientSendSID()
-Sat Feb 22 15:29:12 2020 In clientTxChallenge()
-Sat Feb 22 15:29:12 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:29:12 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:29:12 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
-Sat Feb 22 15:29:19 2020 In clientSendSID()
-Sat Feb 22 15:29:19 2020 In clientTxChallenge()
-Sat Feb 22 15:29:19 2020 In clientRxChallengeResponse()
-Sat Feb 22 15:29:19 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
-Sat Feb 22 15:29:19 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:14 2020 Server started.
+Sun Feb 23 11:05:14 2020 Server listening on IP 127.0.0.1' port '9998'
+Sun Feb 23 11:05:21 2020 Connection from IP '127.0.0.1' PORT '33116' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Sun Feb 23 11:05:21 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:05:21 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:21 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:28 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:05:28 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:35 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:05:35 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:42 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:05:42 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:49 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:05:49 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:05:56 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:05:56 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:03 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:03 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:10 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:10 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:17 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:17 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:24 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:24 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:31 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:31 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:38 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:38 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:45 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:45 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:52 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:52 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
+Sun Feb 23 11:06:59 2020 Connection from server ds29998 to node  lost (IP: 127.0.0.1:9999) in getDATA() Function
+Sun Feb 23 11:06:59 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds29998'
