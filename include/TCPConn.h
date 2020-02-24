@@ -4,6 +4,8 @@
 #include <crypto++/secblock.h>
 #include "FileDesc.h"
 #include "LogMgr.h"
+//To get access to DronPlot deserialize function
+#include "DronePlotDB.h"
 
 const int max_attempts = 2;
 

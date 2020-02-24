@@ -162,18 +162,19 @@ TCPConn.o: TCPConn.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/in.h ../include/exceptions.h \
- ../include/LogMgr.h ../include/strfuncts.h /usr/include/crypto++/osrng.h \
- /usr/include/crypto++/randpool.h /usr/include/crypto++/filters.h \
- /usr/include/crypto++/simple.h /usr/include/crypto++/secblock.h \
- /usr/include/crypto++/queue.h /usr/include/crypto++/algparam.h \
- /usr/include/crypto++/integer.h /usr/include/crypto++/aes.h \
- /usr/include/crypto++/rijndael.h /usr/include/crypto++/seckey.h \
- /usr/include/crypto++/fips140.h /usr/include/crypto++/rng.h \
- /usr/include/crypto++/sha.h /usr/include/crypto++/iterhash.h \
- /usr/include/crypto++/filters.h /usr/include/crypto++/rijndael.h \
- /usr/include/crypto++/gcm.h /usr/include/crypto++/authenc.h \
- /usr/include/crypto++/modes.h /usr/include/crypto++/strciphr.h \
- /usr/include/crypto++/argnames.h /usr/include/crypto++/aes.h
+ ../include/LogMgr.h ../include/DronePlotDB.h ../include/strfuncts.h \
+ /usr/include/crypto++/osrng.h /usr/include/crypto++/randpool.h \
+ /usr/include/crypto++/filters.h /usr/include/crypto++/simple.h \
+ /usr/include/crypto++/secblock.h /usr/include/crypto++/queue.h \
+ /usr/include/crypto++/algparam.h /usr/include/crypto++/integer.h \
+ /usr/include/crypto++/aes.h /usr/include/crypto++/rijndael.h \
+ /usr/include/crypto++/seckey.h /usr/include/crypto++/fips140.h \
+ /usr/include/crypto++/rng.h /usr/include/crypto++/sha.h \
+ /usr/include/crypto++/iterhash.h /usr/include/crypto++/filters.h \
+ /usr/include/crypto++/rijndael.h /usr/include/crypto++/gcm.h \
+ /usr/include/crypto++/authenc.h /usr/include/crypto++/modes.h \
+ /usr/include/crypto++/strciphr.h /usr/include/crypto++/argnames.h \
+ /usr/include/crypto++/aes.h
 
 /usr/include/stdc-predef.h:
 
@@ -632,6 +633,8 @@ TCPConn.o: TCPConn.cpp /usr/include/stdc-predef.h \
 ../include/exceptions.h:
 
 ../include/LogMgr.h:
+
+../include/DronePlotDB.h:
 
 ../include/strfuncts.h:
 

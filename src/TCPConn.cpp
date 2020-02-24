@@ -465,10 +465,30 @@ void TCPConn::sevenClientTxREPData() {
       // Send the replication data
       sendData(_outputbuf);
 
+      // Show what is in the replication data
+         DronePlot bob_tmp_plot; //#include "DronePlotDB.h" was placed in TCPconn.h
+         
+      //for(int numbytes=0; numbytes<12;numbytes++){   
+         bob_tmp_plot.deserialize(_outputbuf, 9); //Is this cause 0-4 is <AUTH> ???
+         
+         //std::cout << "SHOW ME bob_tmp_plot.deserialize(_outputbuf," << numbytes << ") ";
+         //for (int i = 0; i<_outputbuf.size(); i++){std::cout << _outputbuf.at(i) << "";} std::cout << std::endl;   
+         
+         std::cout << "\nTCPConn::drone_id " << bob_tmp_plot.drone_id << " node_id " << bob_tmp_plot.node_id << 
+         " timestamp " << bob_tmp_plot.timestamp << " lat " << bob_tmp_plot.latitude << " long " << bob_tmp_plot.longitude << "\n";
+      //}
+
+      //readBytes();         
+
       if (_verbosity >= 3)
          std::cout << "Successfully authenticated connection with " << getNodeID() <<
                       " and sending replication data.\n";
 
+      //write to log file when successful
+      std::stringstream msg;
+      msg << "Successfully authenticated connection with " << getNodeID() << " and SENT replication data.\n";
+      _server_log.writeLog(msg.str().c_str());  
+      
       // Wait for their response
       _status = s_ninewaitack;
    }
@@ -515,7 +535,7 @@ void TCPConn::eigthSvrRxREPData() {
 
 
       disconnect();
-      _status = s_hasdata; // WHAT IS THIS?
+      _status = s_hasdata; // WHAT IS THIS?... Go to next connection?
    }
 }
 

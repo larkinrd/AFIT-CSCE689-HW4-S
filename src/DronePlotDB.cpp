@@ -384,6 +384,8 @@ int DronePlotDB::loadBinaryFile(const char *filename) {
 
       // Deserialize
       dptr->deserialize(buf);
+      //std::cout << "SHOW ME dptr->deserialize(buf) in DronePlotDB::loadBinaryFile ";
+      //for (int i = 0; i<buf.size(); i++){std::cout << std::stringstream(buf); buf.at(i) << "";} std::cout << std::endl;
       buf.clear();
 
       count++;

@@ -250,6 +250,10 @@ bool QueueMgr::pop(std::string &sid, std::vector<uint8_t> &data) {
       // If this a send item, create a connection and start sending
       if (next_qe.type == send) {
 
+         //BOB SAYS SHOW ME THE DATA...
+         //std::cout << "SHOW ME the next_qe.data in QueueMgr::pop() ";
+         //for (int i = 0; i<next_qe.data.size(); i++){std::cout << next_qe.data.at(i) << "-";} std::cout << std::endl;
+
          // Set up the connection and attempt to establish link (will retry if failure)
          launchDataConn(next_qe.server_id.c_str(), next_qe.data);
 

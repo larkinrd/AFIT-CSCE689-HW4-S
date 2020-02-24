@@ -134,8 +134,20 @@ unsigned int ReplServer::queueNewPlots() {
 
       // If this is a new one, marshall it and clear the flag
       if (dpit->isFlagSet(DBFLAG_NEW)) {
-         
+
+         //std::cout << "01:SHOW ME marshall_data in ReplServer::queueNewPlots";
+         //for (int i = 0; i<marshall_data.size(); i++){std::cout << (char) marshall_data.at(i) << "";} std::cout << std::endl;
+
          dpit->serialize(marshall_data);
+         //std::cout << "02:SHOW ME marshall_data in ReplServer::queueNewPlots";
+         //for (int i = 0; i<marshall_data.size(); i++){std::cout << (char) marshall_data.at(i) << "";} std::cout << std::endl;
+
+         //DESERIALIZE that data and see it
+         //dpit->deserialize(marshall_data, 0);
+         //std::cout << "03:SHOW ME marshall_data in ReplServer::queueNewPlots";
+         //for (int i = 0; i<marshall_data.size(); i++){std::cout << (char) marshall_data.at(i) << "";} std::cout << std::endl;
+      
+         
          dpit->clrFlags(DBFLAG_NEW);
 
          count++;
@@ -216,6 +228,9 @@ void ReplServer::addSingleDronePlot(std::vector<uint8_t> &data) {
    DronePlot tmp_plot;
 
    tmp_plot.deserialize(data);
+
+//std::cout << "\nREPLSVR::drone_id " << tmp_plot.drone_id << " node_id " << tmp_plot.node_id << 
+  //       " timestamp " << tmp_plot.timestamp << " lat " << tmp_plot.latitude << " long " << tmp_plot.longitude << "\n";
 
    _plotdb.addPlot(tmp_plot.drone_id, tmp_plot.node_id, tmp_plot.timestamp, tmp_plot.latitude,
                                                          tmp_plot.longitude);
