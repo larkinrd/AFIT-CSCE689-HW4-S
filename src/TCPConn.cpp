@@ -13,6 +13,8 @@
 #include <crypto++/rijndael.h>
 #include <crypto++/gcm.h>
 #include <crypto++/aes.h>
+//Larkin ADD
+//#include "ReplServer.h"
 
 using namespace CryptoPP;
 
@@ -47,11 +49,16 @@ const unsigned int auth_size = 16;
  *
  **********************************************************************************************/
 
-TCPConn::TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int verbosity):
+// Part of attempt 1 logic
+//TCPConn::TCPConn(ReplServer &svr):_svr(svr){}
+
+// Part of attempt 2 logic
+TCPConn::TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int verbosity/*, ReplServer &svr*/):
                                     _data_ready(false),
                                     _aes_key(key),
                                     _verbosity(verbosity),
-                                    _server_log(server_log)
+                                    _server_log(server_log)//, //Part of attempt 2 logic
+                                    //_svr(svr) //part of attempt 2 logic
 {
    // prep some tools to search for command sequences in data
    uint8_t slash = (uint8_t) '/';
@@ -90,14 +97,15 @@ TCPConn::TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int v
    c_endresp = c_resp;
    c_endresp.insert(c_endresp.begin()+1, 1, slash);
    
-   //TIME for sending system time to synchnize clocks... DO FOR EACH CONNECTION OBJECT? OR SERVER OBJECT?
-   c_time.push_back((uint8_t) '<');    c_time.push_back((uint8_t) 'T');    c_time.push_back((uint8_t) 'I');
-   c_time.push_back((uint8_t) 'M');    c_time.push_back((uint8_t) 'E');    c_time.push_back((uint8_t) '>');
+   //TIME; T0 for Initial, T1 for first attempt to sync, T2 for final attempt
+   c_t0.push_back((uint8_t) '<');    c_t0.push_back((uint8_t) 'T');    c_t0.push_back((uint8_t) '0');    c_t0.push_back((uint8_t) '>');
+   c_t1.push_back((uint8_t) '<');    c_t1.push_back((uint8_t) 'T');    c_t1.push_back((uint8_t) '1');    c_t1.push_back((uint8_t) '>');
+   c_t2.push_back((uint8_t) '<');    c_t2.push_back((uint8_t) 'T');    c_t2.push_back((uint8_t) '2');    c_t2.push_back((uint8_t) '>');
 
-   c_endtime = c_time;
-   c_endtime.insert(c_endtime.begin()+1, 1, slash);
+   c_endt0 = c_t0; c_endt0.insert(c_endt0.begin()+1, 1, slash);
+   c_endt1 = c_t1; c_endt1.insert(c_endt1.begin()+1, 1, slash);
+   c_endt2 = c_t2; c_endt2.insert(c_endt2.begin()+1, 1, slash);
 }
-
 
 TCPConn::~TCPConn() {
 
@@ -243,15 +251,22 @@ void TCPConn::handleConnection() {
 }
    //ONE send UNencrypted <TIME><SID><CHAL>
    void TCPConn::oneClientSendsCHAL() {
-      //std::cout << "ONE: send UNencrypted <TIME><SID><CHAL>\n";
+      
+      //std::cout << "The Adjusted Time is: " << getAdjustedTime() <<"\n";
+
+//      ReplServer *temp;
+//      time_t mytime; 
+//      mytime = temp->getAdjustedTime();
+//      std::cout << "ONE: send UNencrypted <TIME><SID><CHAL> & mytime is: " << mytime <<"\n";
+      
       std::stringstream msg;
       msg << "In clientSendSID()";
       _server_log.writeLog(msg.str().c_str());
       
       //INSERT <TIME> tag data into buf
-      std::string timestr = "sometimestamp"; 
+      std::string timestr = "seqONEtimestamp"; 
       std::vector<uint8_t> buf(timestr.begin(), timestr.end());
-      wrapCmd(buf, c_time, c_endtime);
+      wrapCmd(buf, c_t0, c_endt0);
       
       //INSERT <SID> tag data with my _svr_id into buf
       std::vector<uint8_t> mysid;
@@ -290,8 +305,16 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><S
 
       if (!getCmdData(buf, c_chal, c_endchal)) {
          std::cout << "BUF DID NOT CONTAIN <CHAL>"; return; }
-
+      
+      
       wrapCmd(buf, c_resp, c_endresp);
+
+      //INSERT <T0> tag into first part of buf prior to <RESP>
+      std::string timestr = "seqTWOtimestamp"; 
+      std::vector<uint8_t> temp(timestr.begin(), timestr.end());
+      wrapCmd(temp, c_t0, c_endt0);
+      buf.insert(buf.begin(), temp.begin(), temp.end());
+      
       sendData(buf);
 
       _status = s_fourserver;
@@ -324,6 +347,11 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><S
          std::string authenticated = "clientTRUSTSserver";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
+         //INSERT <T1> Timestamp
+         std::string timestr = "seqTHREEtimestamp"; 
+         std::vector<uint8_t> temp(timestr.begin(), timestr.end());
+         wrapCmd(temp, c_t1, c_endt1);
+         buf.insert(buf.begin(), temp.begin(), temp.end());
          sendData(buf);
          _status = s_fiveclient; //if Good goto FIVE and prcess Svrs CHAL
       } else {
@@ -352,10 +380,10 @@ void TCPConn::fourSvrSendsCHAL(){
    _server_log.writeLog(msg.str().c_str());
    
    //INSERT <TIME> tag data into buf
-   std::string timestr = "sometimestamp"; 
+   std::string timestr = "seqFOURtimestamp"; 
    //std::vector<uint8_t> buf(timestr.begin(), timestr.end());
    buf.assign(timestr.begin(), timestr.end());
-   wrapCmd(buf, c_time, c_endtime);
+   wrapCmd(buf, c_t1, c_endt1);
    
    //INSERT <SID> tag data with my _svr_id into buf
    std::vector<uint8_t> mysid;
@@ -388,10 +416,17 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
 
       if (!getCmdData(buf, c_chal, c_endchal)) {
          std::cout << "BUF DID NOT contain <CHAL> in FIVE\n"; return; }
-      
+
       //send the challenge string 
       wrapCmd(buf, c_resp, c_endresp);
+      //INSERT <T2> Timestamp
+      std::string timestr = "seqFIVEimestamp"; 
+      std::vector<uint8_t> temp(timestr.begin(), timestr.end());
+      wrapCmd(temp, c_t2, c_endt2);
+      buf.insert(buf.begin(), temp.begin(), temp.end());
       sendData(buf);
+
+      
 
       _status = s_sevendatatx;
 
@@ -426,6 +461,11 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
          std::string authenticated = "serverTRUSTSclient";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
+         //INSERT <T2> Timestamp
+         std::string timestr = "seqTHREEtimestamp"; 
+         std::vector<uint8_t> temp(timestr.begin(), timestr.end());
+         wrapCmd(temp, c_t2, c_endt2);
+         buf.insert(buf.begin(), temp.begin(), temp.end());
          sendData(buf);
          _status = s_eightdatarx; //if good go to eight and receive REP dat form client
       } else {

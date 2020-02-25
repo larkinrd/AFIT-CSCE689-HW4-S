@@ -17,14 +17,16 @@
 #include "ALMgr.h"
 //LARKIN ADD FOR DYNAMIC CAST
 #include "QueueMgr.h"
+//LARKIN for passing in Replication Server
+#include "ReplServer.h"
 
 TCPServer::TCPServer(unsigned int verbosity)
                         :_aes_key(CryptoPP::AES::DEFAULT_KEYLENGTH), 
                          _server_log("server.log", 0),
-                         _verbosity(verbosity)
+                         _verbosity(verbosity)//, //part of attempt 2
+                         //_svr(svr) //Part of attempt 2
 {
 }
-
 
 TCPServer::~TCPServer() {
 

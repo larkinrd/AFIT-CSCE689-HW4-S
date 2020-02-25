@@ -180,7 +180,8 @@ TCPServer.o: TCPServer.cpp /usr/include/stdc-predef.h \
  ../include/Server.h ../include/FileDesc.h ../include/exceptions.h \
  ../include/TCPConn.h ../include/LogMgr.h ../include/DronePlotDB.h \
  ../include/ALMgr.h ../include/QueueMgr.h /usr/include/c++/6/queue \
- /usr/include/c++/6/bits/stl_queue.h ../include/TCPServer.h
+ /usr/include/c++/6/bits/stl_queue.h ../include/TCPServer.h \
+ ../include/ReplServer.h ../include/QueueMgr.h
 
 /usr/include/stdc-predef.h:
 
@@ -709,3 +710,7 @@ TCPServer.o: TCPServer.cpp /usr/include/stdc-predef.h \
 /usr/include/c++/6/bits/stl_queue.h:
 
 ../include/TCPServer.h:
+
+../include/ReplServer.h:
+
+../include/QueueMgr.h:

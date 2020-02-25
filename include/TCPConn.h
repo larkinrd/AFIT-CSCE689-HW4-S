@@ -6,6 +6,14 @@
 #include "LogMgr.h"
 //To get access to DronPlot deserialize function
 #include "DronePlotDB.h"
+// WHEN I ADD #include "ReplServer.h" I get the following errors
+/*In file included from ../include/ReplServer.h:6:0,
+                 from ../include/TCPConn.h:10,
+                 from ../include/TCPServer.h:8,
+                 from TCPServer.cpp:16:
+../include/QueueMgr.h:26:1: error: expected class-name before ‘{’ token
+ {*/
+//#include "ReplServer.h" //WHY DOES INCLUDING THIS GIVE ME THE ERROR ABOVE?
 
 const int max_attempts = 2;
 
@@ -14,7 +22,12 @@ const int max_attempts = 2;
 class TCPConn 
 {
 public:
-   TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int verbosity);
+//ATTEMPT 1 with commented out code additions
+   //TCPConn(ReplServer &svr);
+
+//ATTEMPT 2 with commented out code additions
+   TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int verbosity/*, ReplServer &svr*/);
+   
    ~TCPConn();
 
    // The current status of the connection
@@ -99,7 +112,8 @@ private:
 
    bool _connected = false;
 
-   std::vector<uint8_t> c_rep, c_endrep, c_auth, c_endauth, c_ack, c_sid, c_endsid, c_chal, c_endchal, c_resp, c_endresp, c_time, c_endtime;
+   std::vector<uint8_t> c_rep, c_endrep, c_auth, c_endauth, c_ack, c_sid, c_endsid, c_chal, 
+   c_endchal, c_resp, c_endresp, c_t0, c_endt0, c_t1, c_endt1, c_t2, c_endt2;
 
    statustype _status = s_none;
 
@@ -121,6 +135,10 @@ private:
    unsigned int _verbosity;
 
    LogMgr &_server_log;
+
+//Applies to Attempts 1 and 2
+   //ReplServer &_svr;
+
 };
 
 

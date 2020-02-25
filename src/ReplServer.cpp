@@ -79,6 +79,11 @@ void ReplServer::replicate() {
    _queue.bindSvr(_ip_addr.c_str(), _port);
    _queue.listenSvr();
 
+   // Was thinking SERVER SET UP, PASS THE ADJUSTED TIME value to TCPconobject
+   // BUT a static object would be the same starttime for ALL TCPConn Objects
+   // across ALL ReplServers using TCPConn objects
+   
+
    if (_verbosity >= 2)
       std::cout << "Server bound to " << _ip_addr << ", port: " << _port << " and listening\n";
 
