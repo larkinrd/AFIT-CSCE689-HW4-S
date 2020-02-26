@@ -11,6 +11,7 @@ time_t globalrealifesystemstarttime = std::time(0); //Get the real life system t
 std::vector<ulong> otherserversrealtimes; //to save other serversrealtimes
 std::vector<std::string> otherserverids; //to save all other serverids
 std::vector<int> otherserveroffsets;
+int myoffset = 0;
 
 /*********************************************************************************************
  * ReplServer (constructor) - creates our ReplServer. Initializes:

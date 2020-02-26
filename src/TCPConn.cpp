@@ -19,6 +19,8 @@
 #include <ctime>
 #include <stdlib.h>
 
+
+
 using namespace CryptoPP;
 
 //PLACE THIS FUNCTION AT THE TOP BECUASE IT DOES NOT NEED TO BE ASSOCIATED WITH THIS CLASS
@@ -338,6 +340,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       buf.insert(buf.begin(), temp.begin(), temp.end());
       
       sendData(buf);
+      //sendEncryptedData(buf);
 
       _status = s_fourserver;
    } else {   /*std::cout << "Nothing on buffer in twoSvrSendsRESPtoCHAL\n"; */}
@@ -366,7 +369,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
 
       //Got the other servers ID and their Startup time, check to see if already in vector
       if ( std::find(otherserverids.begin(), otherserverids.end(), svrsid) != otherserverids.end()){
-         std::cout << "\nGOT DUPLICATES\n";
+         //std::cout << "\nGOT DUPLICATES\n";
       } else { //add the info to the vector
       otherserverids.push_back(svrsid);
       otherserversrealtimes.push_back(otherservertime);
@@ -377,6 +380,17 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       for (int i=0; i<otherserverids.size(); i++){ 
          std::cout << "SvrID: " << otherserverids.at(i) <<" Time: " << otherserversrealtimes.at(i) <<"\n"; 
       } std::cout << "\n";      
+
+      //Find the minimum element in the vector
+      std::cout << "min element in otherserverrealtimes is: " << *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end()) << std::endl;
+      std::cout << "my servertime is: " << globalrealifesystemstarttime << std::endl;
+      if(globalrealifesystemstarttime == *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end())){
+         std::cout << "I'm the min with offset zero";
+         myoffset = 0;
+      } else {
+         std::cout << "I'm NOT the min with offset" << globalrealifesystemstarttime - *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end()) << "\n";
+         myoffset = globalrealifesystemstarttime - *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end());
+      }
       
       if (!getCmdData(buf, c_resp, c_endresp)) {
          std::cout << "BUF DID NOT CONTAIN <RESP>"; return; }
@@ -385,7 +399,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       for (int i=0; i<buf.size(); i++){  challengeresponsefromsvr += buf.at(i); }
       
       if (_authstr.compare(challengeresponsefromsvr) == 0) {
-         //std::cout << "\n***strings Equal in in three***\n";
+         std::cout << "\n***strings Equal in in three***\n";
          std::string authenticated = "clientTRUSTSserver";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
@@ -402,6 +416,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
          wrapCmd(temp, c_t1, c_endt1);
          buf.insert(buf.begin(), temp.begin(), temp.end());
          sendData(buf);
+         //sendEncryptedData(buf);
          _status = s_fiveclient; //if Good goto FIVE and prcess Svrs CHAL
       } else {
          std::cout << "SERVER DID NOT USE PROPER ENCRYPTION KEY. Client DONT trust yah!";
@@ -483,8 +498,9 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
       std::vector<uint8_t> temp(timestr.begin(), timestr.end());
       wrapCmd(temp, c_t2, c_endt2);
       buf.insert(buf.begin(), temp.begin(), temp.end());
+      
       sendData(buf);
-    
+      //sendEncryptedData(buf);
 
       _status = s_sevendatatx;
 
@@ -514,7 +530,7 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
       for (int i=0; i<buf.size(); i++){  challengeresponsefromclient += buf.at(i); }
        
       if (_authstr.compare(challengeresponsefromclient) == 0) {
-         //std::cout << "\n***strings Equal in five***\n";
+         std::cout << "\n***strings Equal in five***\n";
          std::string authenticated = "serverTRUSTSclient";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
@@ -530,7 +546,9 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
          std::vector<uint8_t> temp(timestr.begin(), timestr.end());
          wrapCmd(temp, c_t2, c_endt2);
          buf.insert(buf.begin(), temp.begin(), temp.end());
+         
          sendData(buf);
+         //sendEncryptedData(buf);
          _status = s_eightdatarx; //if good go to eight and receive REP dat form client
       } else {
          std::cout << "strings NOT EQUAL in five";
@@ -549,6 +567,7 @@ void TCPConn::sevenClientTxREPData() {
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
+      //if (!getEncryptedData(buf))
       if (!getData(buf))
          return;
 
@@ -568,20 +587,23 @@ void TCPConn::sevenClientTxREPData() {
 
       // Send the replication data
       sendData(_outputbuf);
+      //sendEncryptedData(_outputbuf);
 
       // Show what is in the replication data
          DronePlot bob_tmp_plot; //#include "DronePlotDB.h" was placed in TCPconn.h
          
+      int numbytes = 9;   
       //for(int numbytes=0; numbytes<12;numbytes++){   
          bob_tmp_plot.deserialize(_outputbuf, 9); //Is this cause 0-4 is <AUTH> ???
          
-         //std::cout << "SHOW ME bob_tmp_plot.deserialize(_outputbuf," << numbytes << ") ";
-         //for (int i = 0; i<_outputbuf.size(); i++){std::cout << _outputbuf.at(i) << "";} std::cout << std::endl;   
+         std::cout << "SHOW ME bob_tmp_plot.deserialize(_outputbuf," << numbytes << ") ";
+         for (int i = 0; i<_outputbuf.size(); i++){std::cout << _outputbuf.at(i) << "";} std::cout << std::endl;   
          
-         //std::cout << "\nTCPConn::drone_id " << bob_tmp_plot.drone_id << " node_id " << bob_tmp_plot.node_id << 
-         //" timestamp " << bob_tmp_plot.timestamp << " lat " << bob_tmp_plot.latitude << " long " << bob_tmp_plot.longitude << "\n";
+         std::cout << "\nTCPConn::drone_id " << bob_tmp_plot.drone_id << " node_id " << bob_tmp_plot.node_id << 
+         "\n timestamp " << bob_tmp_plot.timestamp << " myoffset " << myoffset << " (timestamp-offset)=" << bob_tmp_plot.timestamp - myoffset <<
+         "\n lat " << bob_tmp_plot.latitude << " long " << bob_tmp_plot.longitude << "\n";
       //}
-
+      //getchar();
       //readBytes();         
 
       if (_verbosity >= 3)
@@ -616,6 +638,7 @@ void TCPConn::eigthSvrRxREPData() {
    //std::cout << "\n Entered TCPConn::waitForData where _connfd.hasData()";
       std::vector<uint8_t> buf;
 
+      //if (!getEncryptedData(buf))
       if (!getData(buf))
          return;
 
@@ -633,6 +656,7 @@ void TCPConn::eigthSvrRxREPData() {
 
       // Send the acknowledgement and disconnect
       sendData(c_ack);
+      //sendEncryptedData(c_ack);
 
       if (_verbosity >= 2)
          std::cout << "Successfully received replication data from " << getNodeID() << "\n";
@@ -652,11 +676,12 @@ void TCPConn::eigthSvrRxREPData() {
 
 void TCPConn::nineClientRxAck() {
 
-//std::cout << "got to nineClientRxAck\n";
+std::cout << "got to nineClientRxAck\n";
    // Should have the ack message
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
+      //if (!getEncryptedData(buf))
       if (!getData(buf))
          return;
 
@@ -667,10 +692,10 @@ void TCPConn::nineClientRxAck() {
          _server_log.writeLog(msg.str().c_str());
       }
   
-      if (_verbosity >= 3)
+      //if (_verbosity >= 3)
          std::cout << "Data ack received from " << getNodeID() << ". Disconnecting.\n";
 
- 
+ std::cout << "got to END OF nineClientRxAck\n";
       disconnect();
    }
 }

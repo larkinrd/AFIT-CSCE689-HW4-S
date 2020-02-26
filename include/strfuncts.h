@@ -25,6 +25,7 @@ extern time_t globalrealifesystemstarttime;// initialized in ReplServer.cpp
 extern std::vector<ulong> otherserversrealtimes; //to save other serversrealtimes
 extern std::vector<std::string> otherserverids; //to save all other serverids
 extern std::vector<int> otherserveroffsets;
+extern int myoffset;
 
 // I WOULD HAVE USED THIS... if we had easy access to a server clock/startup time
 extern time_t simulatedrepserverstarttime;
