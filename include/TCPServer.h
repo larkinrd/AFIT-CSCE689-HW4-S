@@ -53,6 +53,8 @@ protected:
 
    unsigned int _verbosity;
 
+   //ReplServer &_svr;
+
 private:
    // Class to manage the server socket
    SocketFD _sockfd;

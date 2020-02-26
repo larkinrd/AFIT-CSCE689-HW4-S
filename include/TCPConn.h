@@ -6,6 +6,7 @@
 #include "LogMgr.h"
 //To get access to DronPlot deserialize function
 #include "DronePlotDB.h"
+class ReplServer;
 // WHEN I ADD #include "ReplServer.h" I get the following errors
 /*In file included from ../include/ReplServer.h:6:0,
                  from ../include/TCPConn.h:10,

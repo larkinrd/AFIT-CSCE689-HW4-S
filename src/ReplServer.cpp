@@ -1,9 +1,16 @@
 #include <iostream>
 #include <exception>
 #include "ReplServer.h"
+#include <chrono>
+#include <ctime>
+#include <strfuncts.h>
 
 const time_t secs_between_repl = 20;
 const unsigned int max_servers = 10;
+time_t globalrealifesystemstarttime = std::time(0); //Get the real life system time for when THIS ReplServer starts
+std::vector<ulong> otherserversrealtimes; //to save other serversrealtimes
+std::vector<std::string> otherserverids; //to save all other serverids
+std::vector<int> otherserveroffsets;
 
 /*********************************************************************************************
  * ReplServer (constructor) - creates our ReplServer. Initializes:
@@ -39,7 +46,6 @@ ReplServer::ReplServer(DronePlotDB &plotdb, const char *ip_addr, unsigned short 
 }
 
 ReplServer::~ReplServer() {
-
 }
 
 
@@ -111,10 +117,16 @@ void ReplServer::replicate() {
 
          // Incoming replication--add it to this server's local database
          addReplDronePlots(data);         
-      }       
+      }
+      
+      timeSyncMethod(); //run the time sync method to sync server times       
 
       usleep(1000);
    }   
+}
+
+void ReplServer::timeSyncMethod(){
+   //std::cout << "Do Nothing for now" << std::endl;
 }
 
 /**********************************************************************************************

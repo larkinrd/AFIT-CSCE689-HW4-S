@@ -6,7 +6,6 @@
 #include "QueueMgr.h" 
 #include "DronePlotDB.h"
 
-
 /***************************************************************************************
  * ReplServer - class that manages replication between servers. The data is automatically
  *              sent to the _plotdb and the replicate method loops, handling replication
@@ -15,9 +14,10 @@
  *              do deconfliction of nodes
  *
  ***************************************************************************************/
+
 class ReplServer 
 {
-public:
+public:   
    ReplServer(DronePlotDB &plotdb, const char *ip_addr, unsigned short port,
                               float _time_mult = 1.0, unsigned int verbosity = 1);
    ReplServer(DronePlotDB &plotdb, float _time_mult = 1.0);
@@ -33,6 +33,11 @@ public:
    // An adjusted time that accounts for "time_mult", which speeds up the clock. Any
    // attempts to check "simulator time" should use this function
    time_t getAdjustedTime();
+
+   //So the server can modify time settings and offsets provided by other servers
+   //collect the info, figure out who has the minimum time, adjust what I replicate out
+   //at the end, go back and adjust my database time settings, remove duplicates
+   void timeSyncMethod();
 
 private:
 
@@ -64,6 +69,8 @@ private:
    // Used to bind the server
    std::string _ip_addr;
    unsigned short _port;
+
+   
 };
 
 

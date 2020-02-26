@@ -1,7 +1,9 @@
 #include <iostream>
 #include "AntennaSim.h"
 #include "DronePlotDB.h"
+#include "strfuncts.h"
 
+//int globalsimtimeoffset = 0;
 /*****************************************************************************************
  * AntennaSim (constructor) - takes in a reference to the accessible database that will be
  *            populated by the simulator
@@ -69,6 +71,7 @@ void AntennaSim::simulate() {
    // Set up a random offset between 1 and 3 seconds from true
    srand(time(NULL));
    _time_offset = (rand() % 6) - 3;
+   //globalsimtimeoffset = _time_offset;
    if (_verbosity >= 2) 
       std::cout << "SIM: Simulator time offset: " << _time_offset << " secs\n";
 

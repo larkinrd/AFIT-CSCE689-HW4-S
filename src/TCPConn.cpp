@@ -15,6 +15,9 @@
 #include <crypto++/aes.h>
 //Larkin ADD
 //#include "ReplServer.h"
+//class ReplServer;
+#include <ctime>
+#include <stdlib.h>
 
 using namespace CryptoPP;
 
@@ -252,6 +255,8 @@ void TCPConn::handleConnection() {
    //ONE send UNencrypted <TIME><SID><CHAL>
    void TCPConn::oneClientSendsCHAL() {
       
+      std::cout << "***My realifesystemstarttime in TCPConn.cpp.256 is: " << globalrealifesystemstarttime << std::endl;
+      //std::cout << "***The simulatoroffset in TCPConn.cpp.257 is: " << globalsimtimeoffset << std::endl;
       //std::cout << "The Adjusted Time is: " << getAdjustedTime() <<"\n";
 
 //      ReplServer *temp;
@@ -264,7 +269,16 @@ void TCPConn::handleConnection() {
       _server_log.writeLog(msg.str().c_str());
       
       //INSERT <TIME> tag data into buf
-      std::string timestr = "seqONEtimestamp"; 
+/*** THIS WAS A COMPLETE WASTE OF MY TIME... TRYING TO CONVERT FROM TIME_T TO STRING TO UINT_8 AND BACK***/      
+//      char* dt = ctime(&globalrealifesystemstarttime); //convert time_t to string form
+//      std::string timestr = dt;//"seqONEtimestamp"; 
+//      unsigned long testthis = globalrealifesystemstarttime;
+//      std::string str2 = std::to_string(globalrealifesystemstarttime);
+//      std::cout << "testthis is: " << (unsigned long) globalrealifesystemstarttime 
+//         << "timestr is: " << timestr << " str2 is: " << str2 << std::endl;
+/*** THIS WAS A COMPLETE WASTE OF MY TIME... TRYING TO CONVERT FROM TIME_T TO STRING TO UINT_8 AND BACK***/
+
+      std::string timestr = std::to_string(globalrealifesystemstarttime); 
       std::vector<uint8_t> buf(timestr.begin(), timestr.end());
       wrapCmd(buf, c_t0, c_endt0);
       
@@ -273,6 +287,14 @@ void TCPConn::handleConnection() {
       mysid.assign(_svr_id.begin(), _svr_id.end());
       wrapCmd(mysid, c_sid, c_endsid);
       buf.insert(buf.end(), mysid.begin(), mysid.end());
+
+      //On my first transmission, add my sid and startuptime to the vector of servers
+      if ( std::find(otherserverids.begin(), otherserverids.end(), _svr_id) != otherserverids.end()){
+         //std::cout << "\nGOT DUPLICATES\n";
+      } else { //add my info to the vector
+      otherserverids.push_back(_svr_id);
+      otherserversrealtimes.push_back((unsigned long) globalrealifesystemstarttime);
+      }
 
       //INSERT <CHAL>
       _authstr = random_string(10); 
@@ -289,7 +311,7 @@ void TCPConn::handleConnection() {
    _status = s_threeclient;}
    
 //TWO send ENcrypted <TIME><SID><RESP>
-void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><SID><RESP>\n";
+void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME><SID><RESP>\n";
 
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
@@ -298,19 +320,19 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><S
       if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
 
-      //std::vector<uint8_t> copyofbuf; //FOR WHEN I MESS WITH <TIME> and <SID>
-      
-      //std::cout << "284 std::vector<uint8_t> buf in twoSvrSendsRESPtoCHAL() is: ";
-      //for (int i=0; i<buf.size(); i++){ std::cout << buf.at(i); } std::cout << "\n";
-
       if (!getCmdData(buf, c_chal, c_endchal)) {
          std::cout << "BUF DID NOT CONTAIN <CHAL>"; return; }
-      
-      
+            
       wrapCmd(buf, c_resp, c_endresp);
 
-      //INSERT <T0> tag into first part of buf prior to <RESP>
-      std::string timestr = "seqTWOtimestamp"; 
+      //INSERT <SID> tag data with my _svr_id into buf before <RESP>
+      std::vector<uint8_t> mysid;
+      mysid.assign(_svr_id.begin(), _svr_id.end());
+      wrapCmd(mysid, c_sid, c_endsid);
+      buf.insert(buf.begin(), mysid.begin(), mysid.end());
+
+      //INSERT <T0> tag into first part of buf prior to <SID><RESP>
+      std::string timestr = std::to_string(globalrealifesystemstarttime); 
       std::vector<uint8_t> temp(timestr.begin(), timestr.end());
       wrapCmd(temp, c_t0, c_endt0);
       buf.insert(buf.begin(), temp.begin(), temp.end());
@@ -318,7 +340,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><S
       sendData(buf);
 
       _status = s_fourserver;
-   } else {   std::cout << "NOTHING ON THE BUFFER twoSvrSendsRESPtoCHAL\n"; }
+   } else {   /*std::cout << "Nothing on buffer in twoSvrSendsRESPtoCHAL\n"; */}
 }
    //THREE
    void TCPConn::threeClientProcRESP(){//std::cout << "THREE: if Good goto FIVE and prcess Svrs CHAL\n";
@@ -330,23 +352,50 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><S
       if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
       
-      //std::cout << "317 std::vector<uint8_t> buf in threeClientProcRESP() is: ";
-      //for (int i=0; i<buf.size(); i++){ std::cout << buf.at(i); } std::cout << "\n";
+      //Get the other system (i.e. servers) time from between the <t0> tags
+      std::vector<uint8_t> gett0(buf.begin(), buf.end());
+      getCmdData(gett0, c_t0, c_endt0);
+      std::string svrstime (gett0.begin(), gett0.end()); //convert to string
+      unsigned long otherservertime = strtol(svrstime.c_str(), NULL, 0); //convert to unsigned long
 
+      //std::cout << "gett0 in threeClientProcRESP when cast as unsigned long is: " << otherservertime;
+      
+      std::vector<uint8_t> getsid(buf.begin(), buf.end());
+      getCmdData(getsid, c_sid, c_endsid);
+      std::string svrsid (getsid.begin(), getsid.end());
+
+      //Got the other servers ID and their Startup time, check to see if already in vector
+      if ( std::find(otherserverids.begin(), otherserverids.end(), svrsid) != otherserverids.end()){
+         std::cout << "\nGOT DUPLICATES\n";
+      } else { //add the info to the vector
+      otherserverids.push_back(svrsid);
+      otherserversrealtimes.push_back(otherservertime);
+      }
+
+      //PRINT WHATS IN THE VECTORS
+      std::cout << "371 otherserverids and otherserversrealtimes in threeClientProcRESP() is: \n";
+      for (int i=0; i<otherserverids.size(); i++){ 
+         std::cout << "SvrID: " << otherserverids.at(i) <<" Time: " << otherserversrealtimes.at(i) <<"\n"; 
+      } std::cout << "\n";      
+      
       if (!getCmdData(buf, c_resp, c_endresp)) {
          std::cout << "BUF DID NOT CONTAIN <RESP>"; return; }
 
       std::string challengeresponsefromsvr;
       for (int i=0; i<buf.size(); i++){  challengeresponsefromsvr += buf.at(i); }
       
-      std::cout << "challengeresponsefromsvr is: " << challengeresponsefromsvr << std::endl;
-      std::cout << "_authstr is: " << _authstr << std::endl;
-      
       if (_authstr.compare(challengeresponsefromsvr) == 0) {
-         std::cout << "\n***strings Equal in in three***\n";
+         //std::cout << "\n***strings Equal in in three***\n";
          std::string authenticated = "clientTRUSTSserver";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
+         
+         //INSERT <SID> tag data with my _svr_id into buf before <RESP>
+         std::vector<uint8_t> mysid;
+         mysid.assign(_svr_id.begin(), _svr_id.end());
+         wrapCmd(mysid, c_sid, c_endsid);
+         buf.insert(buf.begin(), mysid.begin(), mysid.end());
+
          //INSERT <T1> Timestamp
          std::string timestr = "seqTHREEtimestamp"; 
          std::vector<uint8_t> temp(timestr.begin(), timestr.end());
@@ -365,32 +414,33 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){std::cout << "TWO: send ENcrypted <TIME><S
 void TCPConn::fourSvrSendsCHAL(){
 
    if (_connfd.hasData()) {
-   std::cout << "Entered FOUR with data on socket: send UNencrypted <TIME><SID><CHAL>\n";
+   //std::cout << "Entered FOUR with data on socket: send UNencrypted <TIME><SID><CHAL>\n";
    std::vector<uint8_t> buf;
 
    //if (!getEncryptedData(buf))
    if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
    return;
 
+   std::vector<uint8_t> gett1(buf.begin(), buf.end());
+   getCmdData(gett1, c_t1, c_endt1);
+   std::vector<uint8_t> getsid(buf.begin(), buf.end());
+   getCmdData(getsid, c_sid, c_endsid);
+   
    if (!getCmdData(buf, c_auth, c_endauth)) {
       std::cout << "BUF DID NOT CONTAIN <AUTH> from Client"; return; }
 
-   std::stringstream msg;
-   msg << "In clientSendSID()";
-   _server_log.writeLog(msg.str().c_str());
-   
-   //INSERT <TIME> tag data into buf
-   std::string timestr = "seqFOURtimestamp"; 
-   //std::vector<uint8_t> buf(timestr.begin(), timestr.end());
-   buf.assign(timestr.begin(), timestr.end());
-   wrapCmd(buf, c_t1, c_endt1);
-   
    //INSERT <SID> tag data with my _svr_id into buf
    std::vector<uint8_t> mysid;
    mysid.assign(_svr_id.begin(), _svr_id.end());
    wrapCmd(mysid, c_sid, c_endsid);
-   buf.insert(buf.end(), mysid.begin(), mysid.end());
-
+   buf.insert(buf.begin(), mysid.begin(), mysid.end());
+   
+   //INSERT <T2> tag data into buf
+   std::string timestr = "seqFOURtimestamp"; 
+   buf.insert(buf.begin(), timestr.begin(), timestr.end());
+   wrapCmd(buf, c_t2, c_endt2);
+   buf.insert(buf.begin(), timestr.begin(), timestr.end());
+   
    //INSERT <CHAL>
    _authstr = random_string(20); //NOTE: Keeping same length of 10 returned same random string.. prob needed SEED
    std::vector<uint8_t> sendchallenge(_authstr.begin(), _authstr.end());
@@ -411,22 +461,30 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
       if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
       
-      //std::cout << "391 std::vector<uint8_t> buf in FIVE::ClientProcRESP() is: ";
-      //for (int i=0; i<buf.size(); i++){ std::cout << buf.at(i); } std::cout << "\n";
+      std::vector<uint8_t> gett2(buf.begin(), buf.end());
+      getCmdData(gett2, c_t2, c_endt2);
+      std::vector<uint8_t> getsid(buf.begin(), buf.end());
+      getCmdData(getsid, c_sid, c_endsid);
 
       if (!getCmdData(buf, c_chal, c_endchal)) {
          std::cout << "BUF DID NOT contain <CHAL> in FIVE\n"; return; }
 
       //send the challenge string 
       wrapCmd(buf, c_resp, c_endresp);
+      
+      //INSERT <SID> tag data with my _svr_id into buf
+      std::vector<uint8_t> mysid;
+      mysid.assign(_svr_id.begin(), _svr_id.end());
+      wrapCmd(mysid, c_sid, c_endsid);
+      buf.insert(buf.begin(), mysid.begin(), mysid.end());
+      
       //INSERT <T2> Timestamp
       std::string timestr = "seqFIVEimestamp"; 
       std::vector<uint8_t> temp(timestr.begin(), timestr.end());
       wrapCmd(temp, c_t2, c_endt2);
       buf.insert(buf.begin(), temp.begin(), temp.end());
       sendData(buf);
-
-      
+    
 
       _status = s_sevendatatx;
 
@@ -435,7 +493,7 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
 }
    
    //SIX
-   void TCPConn::sixSvrProcRESP(){std::cout << "SIX: if good go to eight and receive REP dat form client\n";
+   void TCPConn::sixSvrProcRESP(){//std::cout << "SIX: if good go to eight and receive REP dat form client\n";
    
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
@@ -444,23 +502,29 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
       if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
       
-      std::cout << "415 std::vector<uint8_t> buf in threeClientProcRESP() is: ";
-      for (int i=0; i<buf.size(); i++){ std::cout << buf.at(i); } std::cout << "\n";
-
+      std::vector<uint8_t> gett2(buf.begin(), buf.end());
+      getCmdData(gett2, c_t2, c_endt2);
+      std::vector<uint8_t> getsid(buf.begin(), buf.end());
+      getCmdData(getsid, c_sid, c_endsid);
+      
       if (!getCmdData(buf, c_resp, c_endresp)) {
          std::cout << "BUF DID NOT CONTAIN <RESP>"; return; }
 
       std::string challengeresponsefromclient;
       for (int i=0; i<buf.size(); i++){  challengeresponsefromclient += buf.at(i); }
-      
-      std::cout << "challengeresponsefromsvr is: " << challengeresponsefromclient << std::endl;
-      std::cout << "_authstr is: " << _authstr << std::endl;
-      
+       
       if (_authstr.compare(challengeresponsefromclient) == 0) {
-         std::cout << "\n***strings Equal in five***\n";
+         //std::cout << "\n***strings Equal in five***\n";
          std::string authenticated = "serverTRUSTSclient";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
+         
+         //INSERT <SID> tag data with my _svr_id into buf
+         std::vector<uint8_t> mysid;
+         mysid.assign(_svr_id.begin(), _svr_id.end());
+         wrapCmd(mysid, c_sid, c_endsid);
+         buf.insert(buf.begin(), mysid.begin(), mysid.end());
+         
          //INSERT <T2> Timestamp
          std::string timestr = "seqTHREEtimestamp"; 
          std::vector<uint8_t> temp(timestr.begin(), timestr.end());
@@ -497,7 +561,7 @@ void TCPConn::sevenClientTxREPData() {
          return;
       }
 
-      std::cout << "got to sevenClientTxREPData with an <AUTH> tag from Server\n";
+      //std::cout << "got to sevenClientTxREPData with an <AUTH> tag from Server\n";
 
       std::string node(buf.begin(), buf.end());
       setNodeID(node.c_str());
@@ -514,8 +578,8 @@ void TCPConn::sevenClientTxREPData() {
          //std::cout << "SHOW ME bob_tmp_plot.deserialize(_outputbuf," << numbytes << ") ";
          //for (int i = 0; i<_outputbuf.size(); i++){std::cout << _outputbuf.at(i) << "";} std::cout << std::endl;   
          
-         std::cout << "\nTCPConn::drone_id " << bob_tmp_plot.drone_id << " node_id " << bob_tmp_plot.node_id << 
-         " timestamp " << bob_tmp_plot.timestamp << " lat " << bob_tmp_plot.latitude << " long " << bob_tmp_plot.longitude << "\n";
+         //std::cout << "\nTCPConn::drone_id " << bob_tmp_plot.drone_id << " node_id " << bob_tmp_plot.node_id << 
+         //" timestamp " << bob_tmp_plot.timestamp << " lat " << bob_tmp_plot.latitude << " long " << bob_tmp_plot.longitude << "\n";
       //}
 
       //readBytes();         
@@ -549,7 +613,7 @@ void TCPConn::eigthSvrRxREPData() {
    // If data on the socket, should be replication data
    if (_connfd.hasData()) {
 
-   std::cout << "\n Entered TCPConn::waitForData where _connfd.hasData()";
+   //std::cout << "\n Entered TCPConn::waitForData where _connfd.hasData()";
       std::vector<uint8_t> buf;
 
       if (!getData(buf))
@@ -588,7 +652,7 @@ void TCPConn::eigthSvrRxREPData() {
 
 void TCPConn::nineClientRxAck() {
 
-std::cout << "got to nineClientRxAck\n";
+//std::cout << "got to nineClientRxAck\n";
    // Should have the ack message
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;

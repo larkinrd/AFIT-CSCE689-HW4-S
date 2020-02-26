@@ -163,7 +163,7 @@ ReplServer.o: ReplServer.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
  ../include/exceptions.h ../include/TCPConn.h ../include/LogMgr.h \
- ../include/DronePlotDB.h
+ ../include/DronePlotDB.h ../include/strfuncts.h
 
 /usr/include/stdc-predef.h:
 
@@ -630,3 +630,5 @@ ReplServer.o: ReplServer.cpp /usr/include/stdc-predef.h \
 ../include/LogMgr.h:
 
 ../include/DronePlotDB.h:
+
+../include/strfuncts.h:

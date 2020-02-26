@@ -102,7 +102,12 @@ LogMgr.o: LogMgr.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/6/bits/locale_facets.tcc \
  /usr/include/c++/6/bits/basic_ios.tcc \
  /usr/include/c++/6/bits/ostream.tcc /usr/include/string.h \
- ../include/LogMgr.h ../include/strfuncts.h ../include/exceptions.h
+ ../include/LogMgr.h ../include/strfuncts.h /usr/include/c++/6/vector \
+ /usr/include/c++/6/bits/stl_construct.h \
+ /usr/include/c++/6/bits/stl_uninitialized.h \
+ /usr/include/c++/6/bits/stl_vector.h \
+ /usr/include/c++/6/bits/stl_bvector.h /usr/include/c++/6/bits/vector.tcc \
+ ../include/exceptions.h
 
 /usr/include/stdc-predef.h:
 
@@ -377,5 +382,17 @@ LogMgr.o: LogMgr.cpp /usr/include/stdc-predef.h \
 ../include/LogMgr.h:
 
 ../include/strfuncts.h:
+
+/usr/include/c++/6/vector:
+
+/usr/include/c++/6/bits/stl_construct.h:
+
+/usr/include/c++/6/bits/stl_uninitialized.h:
+
+/usr/include/c++/6/bits/stl_vector.h:
+
+/usr/include/c++/6/bits/stl_bvector.h:
+
+/usr/include/c++/6/bits/vector.tcc:
 
 ../include/exceptions.h:

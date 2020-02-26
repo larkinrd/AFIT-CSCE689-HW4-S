@@ -297,7 +297,7 @@ void QueueMgr::launchDataConn(const char *sid, std::vector<uint8_t> &data) {
    }
 
    // Try to connect to the server and if there's an issue, delete and re-throw socket_error
-   TCPConn *new_conn = new TCPConn(_server_log, _aes_key, _verbosity);
+   TCPConn *new_conn = new TCPConn(_server_log, _aes_key, _verbosity/*, _svr*/);
    new_conn->setNodeID(sid);
    new_conn->setSvrID(getServerID());
 
