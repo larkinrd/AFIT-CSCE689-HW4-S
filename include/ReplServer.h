@@ -17,8 +17,9 @@
 
 class ReplServer 
 {
-public:   
-   ReplServer(DronePlotDB &plotdb, const char *ip_addr, unsigned short port,
+
+public:
+   ReplServer(DronePlotDB &plotdb, const char *ip_addr, unsigned short port, int offset,
                               float _time_mult = 1.0, unsigned int verbosity = 1);
    ReplServer(DronePlotDB &plotdb, float _time_mult = 1.0);
    virtual ~ReplServer();
