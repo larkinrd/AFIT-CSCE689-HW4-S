@@ -1,38 +1,314 @@
-Wed Feb 26 09:23:21 2020 Server started.
-Wed Feb 26 09:23:21 2020 Server listening on IP 127.0.0.1' port '9999'
-Wed Feb 26 09:23:28 2020 In clientSendSID()
-Wed Feb 26 09:23:28 2020 In clientSendSID()
-Wed Feb 26 09:23:28 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+Thu Feb 27 20:05:33 2020 Server started.
+Thu Feb 27 20:05:33 2020 Server listening on IP 127.0.0.1' port '9999'
+Thu Feb 27 20:05:39 2020 In clientSendSID()
+Thu Feb 27 20:05:39 2020 In clientSendSID()
+Thu Feb 27 20:05:39 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
 
-Wed Feb 26 09:23:28 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+Thu Feb 27 20:05:39 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
 
-Wed Feb 26 09:23:28 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
-Wed Feb 26 09:23:28 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
-Wed Feb 26 09:23:28 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
-Wed Feb 26 09:23:28 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
-Wed Feb 26 09:23:29 2020 Connection from IP '127.0.0.1' PORT '37416' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:29 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:30 2020 Connection from IP '127.0.0.1' PORT '37420' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:30 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:36 2020 Connection from IP '127.0.0.1' PORT '37424' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:36 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:37 2020 Connection from IP '127.0.0.1' PORT '37428' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:37 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:43 2020 Connection from IP '127.0.0.1' PORT '37436' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:43 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:44 2020 Connection from IP '127.0.0.1' PORT '37440' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:44 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:51 2020 Connection from IP '127.0.0.1' PORT '37452' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:51 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:23:58 2020 Connection from IP '127.0.0.1' PORT '37458' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:23:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:24:05 2020 Connection from IP '127.0.0.1' PORT '37462' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:24:05 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:24:12 2020 Connection from IP '127.0.0.1' PORT '37466' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:24:12 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:24:19 2020 Connection from IP '127.0.0.1' PORT '37472' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:24:19 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:24:26 2020 Connection from IP '127.0.0.1' PORT '37480' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:24:26 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
-Wed Feb 26 09:24:33 2020 Connection from IP '127.0.0.1' PORT '37488' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
-Wed Feb 26 09:24:33 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:39 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:05:39 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:05:39 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:39 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:40 2020 Connection from IP '127.0.0.1' PORT '58354' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:40 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:41 2020 Connection from IP '127.0.0.1' PORT '58358' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:41 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:43 2020 Connection from IP '127.0.0.1' PORT '58362' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:43 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:44 2020 Connection from IP '127.0.0.1' PORT '58366' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:44 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:46 2020 Connection from IP '127.0.0.1' PORT '58372' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:46 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:47 2020 Connection from IP '127.0.0.1' PORT '58376' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:47 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:49 2020 Connection from IP '127.0.0.1' PORT '58380' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:49 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:50 2020 Connection from IP '127.0.0.1' PORT '58384' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:50 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:51 2020 In clientSendSID()
+Thu Feb 27 20:05:51 2020 In clientSendSID()
+Thu Feb 27 20:05:51 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:05:51 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:05:51 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:05:51 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:05:51 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:51 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:52 2020 Connection from IP '127.0.0.1' PORT '58392' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:52 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:53 2020 Connection from IP '127.0.0.1' PORT '58396' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:53 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:54 2020 In clientSendSID()
+Thu Feb 27 20:05:54 2020 In clientSendSID()
+Thu Feb 27 20:05:54 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:05:54 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:05:54 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:05:54 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:05:54 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:54 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:55 2020 Connection from IP '127.0.0.1' PORT '58404' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:55 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:56 2020 Connection from IP '127.0.0.1' PORT '58412' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:56 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:57 2020 In clientSendSID()
+Thu Feb 27 20:05:57 2020 In clientSendSID()
+Thu Feb 27 20:05:57 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:05:57 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:05:57 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:05:57 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:05:57 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:57 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:05:58 2020 Connection from IP '127.0.0.1' PORT '58420' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:05:59 2020 Connection from IP '127.0.0.1' PORT '58428' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:05:59 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:00 2020 In clientSendSID()
+Thu Feb 27 20:06:00 2020 In clientSendSID()
+Thu Feb 27 20:06:00 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:00 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:00 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:00 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:00 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:00 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:01 2020 Connection from IP '127.0.0.1' PORT '58436' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:01 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:02 2020 Connection from IP '127.0.0.1' PORT '58440' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:02 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:03 2020 In clientSendSID()
+Thu Feb 27 20:06:03 2020 In clientSendSID()
+Thu Feb 27 20:06:03 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:03 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:03 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:03 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:03 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:03 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:04 2020 Connection from IP '127.0.0.1' PORT '58450' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:04 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:05 2020 Connection from IP '127.0.0.1' PORT '58454' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:05 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:06 2020 In clientSendSID()
+Thu Feb 27 20:06:06 2020 In clientSendSID()
+Thu Feb 27 20:06:06 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:06 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:06 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:06 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:06 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:06 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:07 2020 Connection from IP '127.0.0.1' PORT '58462' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:07 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:08 2020 Connection from IP '127.0.0.1' PORT '58466' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:08 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:09 2020 In clientSendSID()
+Thu Feb 27 20:06:09 2020 In clientSendSID()
+Thu Feb 27 20:06:09 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:09 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:09 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:09 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:09 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:09 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:10 2020 Connection from IP '127.0.0.1' PORT '58474' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:10 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:11 2020 Connection from IP '127.0.0.1' PORT '58478' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:11 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:12 2020 In clientSendSID()
+Thu Feb 27 20:06:12 2020 In clientSendSID()
+Thu Feb 27 20:06:12 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:12 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:12 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:12 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:12 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:12 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:13 2020 Connection from IP '127.0.0.1' PORT '58488' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:13 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:14 2020 Connection from IP '127.0.0.1' PORT '58492' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:14 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:15 2020 In clientSendSID()
+Thu Feb 27 20:06:15 2020 In clientSendSID()
+Thu Feb 27 20:06:15 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:15 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:15 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:15 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:15 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:15 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:16 2020 Connection from IP '127.0.0.1' PORT '58500' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:16 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:17 2020 Connection from IP '127.0.0.1' PORT '58504' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:17 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:18 2020 In clientSendSID()
+Thu Feb 27 20:06:18 2020 In clientSendSID()
+Thu Feb 27 20:06:18 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:18 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:18 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:18 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:18 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:18 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:19 2020 Connection from IP '127.0.0.1' PORT '58512' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:19 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:20 2020 Connection from IP '127.0.0.1' PORT '58516' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:20 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:21 2020 In clientSendSID()
+Thu Feb 27 20:06:21 2020 In clientSendSID()
+Thu Feb 27 20:06:21 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:21 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:21 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:21 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:21 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:21 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:22 2020 Connection from IP '127.0.0.1' PORT '58524' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:22 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:23 2020 Connection from IP '127.0.0.1' PORT '58528' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:23 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:24 2020 In clientSendSID()
+Thu Feb 27 20:06:24 2020 In clientSendSID()
+Thu Feb 27 20:06:24 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:24 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:24 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:24 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:24 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:24 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:25 2020 Connection from IP '127.0.0.1' PORT '58536' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:25 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:26 2020 Connection from IP '127.0.0.1' PORT '58540' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:26 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:27 2020 In clientSendSID()
+Thu Feb 27 20:06:27 2020 In clientSendSID()
+Thu Feb 27 20:06:27 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:27 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:27 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:27 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:27 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:27 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:28 2020 Connection from IP '127.0.0.1' PORT '58550' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:28 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:29 2020 Connection from IP '127.0.0.1' PORT '58556' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:29 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:30 2020 In clientSendSID()
+Thu Feb 27 20:06:30 2020 In clientSendSID()
+Thu Feb 27 20:06:30 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:30 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:30 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:30 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:30 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:30 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:31 2020 Connection from IP '127.0.0.1' PORT '58564' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:31 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:32 2020 Connection from IP '127.0.0.1' PORT '58568' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:32 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:33 2020 In clientSendSID()
+Thu Feb 27 20:06:33 2020 In clientSendSID()
+Thu Feb 27 20:06:33 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:33 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:33 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:33 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:33 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:33 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:34 2020 Connection from IP '127.0.0.1' PORT '58576' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:34 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:35 2020 Connection from IP '127.0.0.1' PORT '58580' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:35 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:36 2020 In clientSendSID()
+Thu Feb 27 20:06:36 2020 In clientSendSID()
+Thu Feb 27 20:06:36 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:36 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:36 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:36 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:36 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:36 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:37 2020 Connection from IP '127.0.0.1' PORT '58588' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:37 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:38 2020 Connection from IP '127.0.0.1' PORT '58596' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:38 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:39 2020 In clientSendSID()
+Thu Feb 27 20:06:39 2020 In clientSendSID()
+Thu Feb 27 20:06:39 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:39 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:39 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:39 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:39 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:39 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:40 2020 Connection from IP '127.0.0.1' PORT '58604' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:40 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:41 2020 Connection from IP '127.0.0.1' PORT '58608' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:41 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:42 2020 In clientSendSID()
+Thu Feb 27 20:06:42 2020 In clientSendSID()
+Thu Feb 27 20:06:42 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:42 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:42 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:42 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:42 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:42 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:43 2020 Connection from IP '127.0.0.1' PORT '58616' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:43 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:44 2020 Connection from IP '127.0.0.1' PORT '58620' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:44 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:45 2020 In clientSendSID()
+Thu Feb 27 20:06:45 2020 In clientSendSID()
+Thu Feb 27 20:06:45 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:45 2020 Successfully authenticated connection with serverTRUSTSclient and SENT replication data.
+
+Thu Feb 27 20:06:45 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9998) in getDATA() Function
+Thu Feb 27 20:06:45 2020 Connection from server ds19999 to node serverTRUSTSclient lost (IP: 127.0.0.1:9997) in getDATA() Function
+Thu Feb 27 20:06:45 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:45 2020 Node ID/IP/Port (not coded)'serverTRUSTSclient' lost connection from 'ds19999'
+Thu Feb 27 20:06:46 2020 Connection from IP '127.0.0.1' PORT '58628' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:46 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:47 2020 Connection from IP '127.0.0.1' PORT '58632' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:47 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:49 2020 Connection from IP '127.0.0.1' PORT '58636' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:49 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:50 2020 Connection from IP '127.0.0.1' PORT '58640' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:50 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:52 2020 Connection from IP '127.0.0.1' PORT '58644' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:52 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:53 2020 Connection from IP '127.0.0.1' PORT '58648' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:53 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:55 2020 Connection from IP '127.0.0.1' PORT '58652' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:55 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:56 2020 Connection from IP '127.0.0.1' PORT '58656' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:56 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:58 2020 Connection from IP '127.0.0.1' PORT '58660' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:58 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:06:59 2020 Connection from IP '127.0.0.1' PORT '58664' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:06:59 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:07:01 2020 Connection from IP '127.0.0.1' PORT '58668' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:07:01 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'
+Thu Feb 27 20:07:02 2020 Connection from IP '127.0.0.1' PORT '58672' with NodeID (can't get NodeID). TCP 3-way handshake in TCPServer::handleSocket() Complete
+Thu Feb 27 20:07:02 2020 Node ID/IP/Port (not coded)'' lost connection from 'ds19999'

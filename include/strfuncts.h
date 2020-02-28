@@ -20,12 +20,14 @@ int hideInput(int fd, bool hide);
 void genRandString(std::string &buf, size_t n);
 
 // Create global variables for ReplServer and TCPConn to exchange info
-extern time_t globalrealifesystemstarttime;// initialized in ReplServer.cpp
+//extern time_t globalrealifesystemstarttime;// initialized in ReplServer.cpp
+extern time_t simrepserverstarttime;
 //NOTE: I get the time since epoch that can be changed directly to a string or unsigned long
-extern std::vector<ulong> otherserversrealtimes; //to save other serversrealtimes
+extern std::vector<ulong> otherserversstarttimes; //to save other serversrealtimes
 extern std::vector<std::string> otherserverids; //to save all other serverids
 extern std::vector<int> otherserveroffsets;
 extern int myoffset;
+extern int maxnumservers;
 
 // I WOULD HAVE USED THIS... if we had easy access to a server clock/startup time
 extern time_t simulatedrepserverstarttime;

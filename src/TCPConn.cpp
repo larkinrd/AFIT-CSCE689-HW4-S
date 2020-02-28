@@ -257,7 +257,7 @@ void TCPConn::handleConnection() {
    //ONE send UNencrypted <TIME><SID><CHAL>
    void TCPConn::oneClientSendsCHAL() {
       
-      std::cout << "***My realifesystemstarttime in TCPConn.cpp.256 is: " << globalrealifesystemstarttime << std::endl;
+      //td::cout << "***My simrepserverstarttime in TCPConn.cpp.256 is: " << simrepserverstarttime << std::endl;
       //std::cout << "***The simulatoroffset in TCPConn.cpp.257 is: " << globalsimtimeoffset << std::endl;
       //std::cout << "The Adjusted Time is: " << getAdjustedTime() <<"\n";
 
@@ -280,7 +280,7 @@ void TCPConn::handleConnection() {
 //         << "timestr is: " << timestr << " str2 is: " << str2 << std::endl;
 /*** THIS WAS A COMPLETE WASTE OF MY TIME... TRYING TO CONVERT FROM TIME_T TO STRING TO UINT_8 AND BACK***/
 
-      std::string timestr = std::to_string(globalrealifesystemstarttime); 
+      std::string timestr = std::to_string(simrepserverstarttime); 
       std::vector<uint8_t> buf(timestr.begin(), timestr.end());
       wrapCmd(buf, c_t0, c_endt0);
       
@@ -295,7 +295,7 @@ void TCPConn::handleConnection() {
          //std::cout << "\nGOT DUPLICATES\n";
       } else { //add my info to the vector
       otherserverids.push_back(_svr_id);
-      otherserversrealtimes.push_back((unsigned long) globalrealifesystemstarttime);
+      otherserversstarttimes.push_back((unsigned long) simrepserverstarttime);
       }
 
       //INSERT <CHAL>
@@ -334,7 +334,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       buf.insert(buf.begin(), mysid.begin(), mysid.end());
 
       //INSERT <T0> tag into first part of buf prior to <SID><RESP>
-      std::string timestr = std::to_string(globalrealifesystemstarttime); 
+      std::string timestr = std::to_string(simrepserverstarttime); 
       std::vector<uint8_t> temp(timestr.begin(), timestr.end());
       wrapCmd(temp, c_t0, c_endt0);
       buf.insert(buf.begin(), temp.begin(), temp.end());
@@ -372,24 +372,23 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
          //std::cout << "\nGOT DUPLICATES\n";
       } else { //add the info to the vector
       otherserverids.push_back(svrsid);
-      otherserversrealtimes.push_back(otherservertime);
+      otherserversstarttimes.push_back(otherservertime);
       }
 
       //PRINT WHATS IN THE VECTORS
-      std::cout << "371 otherserverids and otherserversrealtimes in threeClientProcRESP() is: \n";
-      for (int i=0; i<otherserverids.size(); i++){ 
-         std::cout << "SvrID: " << otherserverids.at(i) <<" Time: " << otherserversrealtimes.at(i) <<"\n"; 
-      } std::cout << "\n";      
+//      std::cout << "371 otherserverids and otherserversrealtimes in threeClientProcRESP() is: \n";
+//      for (int i=0; i<otherserverids.size(); i++){ 
+//         std::cout << "SvrID: " << otherserverids.at(i) <<" Time: " << otherserversstarttimes.at(i) <<"\n"; 
+//      } std::cout << "\n";      
 
       //Find the minimum element in the vector
-      std::cout << "min element in otherserverrealtimes is: " << *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end()) << std::endl;
-      std::cout << "my servertime is: " << globalrealifesystemstarttime << std::endl;
-      if(globalrealifesystemstarttime == *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end())){
-         std::cout << "I'm the min with offset zero";
+      //std::cout << "My SYS time is: " << simrepserverstarttime << " and MIN element in otherserverrealtimes is: " << *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end()) << std::endl;
+      if(simrepserverstarttime == *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end())){
+         //std::cout << "I'm the min with offset zero" << std::endl;
          myoffset = 0;
       } else {
-         std::cout << "I'm NOT the min with offset" << globalrealifesystemstarttime - *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end()) << "\n";
-         myoffset = globalrealifesystemstarttime - *std::min_element(otherserversrealtimes.begin(), otherserversrealtimes.end());
+         //std::cout << " and I'm NOT the min with offset of: " << simrepserverstarttime - *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end()) << std::endl;
+         myoffset = simrepserverstarttime - *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end());
       }
       
       if (!getCmdData(buf, c_resp, c_endresp)) {
@@ -399,7 +398,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       for (int i=0; i<buf.size(); i++){  challengeresponsefromsvr += buf.at(i); }
       
       if (_authstr.compare(challengeresponsefromsvr) == 0) {
-         std::cout << "\n***strings Equal in in three***\n";
+         //std::cout << "\n***strings Equal in in three***\n";
          std::string authenticated = "clientTRUSTSserver";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
@@ -530,7 +529,7 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
       for (int i=0; i<buf.size(); i++){  challengeresponsefromclient += buf.at(i); }
        
       if (_authstr.compare(challengeresponsefromclient) == 0) {
-         std::cout << "\n***strings Equal in five***\n";
+         //std::cout << "\n***strings Equal in five***\n";
          std::string authenticated = "serverTRUSTSclient";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
@@ -582,6 +581,14 @@ void TCPConn::sevenClientTxREPData() {
 
       //std::cout << "got to sevenClientTxREPData with an <AUTH> tag from Server\n";
 
+      //test to ensure we have SA on all other servers via the maxnumservers variable
+      //maxnumservers declared in strfuncts.h and set in ReplServer.cpp
+      // WHEN I GET TRAPPED HERE... I NEVER GET AN UPDATED VECTOR TABLE
+      //while (otherserverids.size() != maxnumservers){
+      //   std::cout << "Sleeping one second to collect other servers SID and TIME" << std::endl;
+      //   sleep(1);
+      //}
+
       std::string node(buf.begin(), buf.end());
       setNodeID(node.c_str());
 
@@ -592,8 +599,8 @@ void TCPConn::sevenClientTxREPData() {
       // Show what is in the replication data
          DronePlot bob_tmp_plot; //#include "DronePlotDB.h" was placed in TCPconn.h
          
-      int numbytes = 9;   
-      //for(int numbytes=0; numbytes<12;numbytes++){   
+      //int numbytes = 9;   
+/*      //for(int numbytes=0; numbytes<12;numbytes++){   
          bob_tmp_plot.deserialize(_outputbuf, 9); //Is this cause 0-4 is <AUTH> ???
          
          std::cout << "SHOW ME bob_tmp_plot.deserialize(_outputbuf," << numbytes << ") ";
@@ -602,7 +609,7 @@ void TCPConn::sevenClientTxREPData() {
          std::cout << "\nTCPConn::drone_id " << bob_tmp_plot.drone_id << " node_id " << bob_tmp_plot.node_id << 
          "\n timestamp " << bob_tmp_plot.timestamp << " myoffset " << myoffset << " (timestamp-offset)=" << bob_tmp_plot.timestamp - myoffset <<
          "\n lat " << bob_tmp_plot.latitude << " long " << bob_tmp_plot.longitude << "\n";
-      //}
+*/      //}
       //getchar();
       //readBytes();         
 
@@ -676,7 +683,7 @@ void TCPConn::eigthSvrRxREPData() {
 
 void TCPConn::nineClientRxAck() {
 
-std::cout << "got to nineClientRxAck\n";
+//std::cout << "got to nineClientRxAck\n";
    // Should have the ack message
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;

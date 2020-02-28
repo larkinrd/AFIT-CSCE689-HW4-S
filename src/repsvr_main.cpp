@@ -173,11 +173,14 @@ int main(int argc, char *argv[]) {
       throw std::runtime_error("Unable to create simulator thread");
 
    // Start the replication server
+   usleep(400);
    ReplServer repl_server(db, ip_addr.c_str(), port, sim.getOffset(), time_mult, verbosity); 
+   std::cout << "sim.getOffset()" << sim.getOffset() << std::endl;
 
    pthread_t replthread;
    if (pthread_create(&replthread, NULL, t_replserver, (void *) &repl_server) != 0)
       throw std::runtime_error("Unable to create replication server thread");
+   std::cout << "sim.getOffset()" << sim.getOffset() << std::endl;
 
    // Sleep the duration of the simulation
    sleep(sim_time / time_mult);

@@ -7,11 +7,13 @@
 
 const time_t secs_between_repl = 20;
 const unsigned int max_servers = 10;
-time_t globalrealifesystemstarttime = std::time(0); //Get the real life system time for when THIS ReplServer starts
-std::vector<ulong> otherserversrealtimes; //to save other serversrealtimes
+//time_t globalrealifesystemstarttime = std::time(0); //Get the real life system time for when THIS ReplServer starts
+time_t simrepserverstarttime = 0; //initialize to zero
+std::vector<ulong> otherserversstarttimes; //to save other serversrealtimes
 std::vector<std::string> otherserverids; //to save all other serverids
 std::vector<int> otherserveroffsets;
 int myoffset = 0;
+int maxnumservers=3;
 
 /*********************************************************************************************
  * ReplServer (constructor) - creates our ReplServer. Initializes:
@@ -43,9 +45,11 @@ ReplServer::ReplServer(DronePlotDB &plotdb, const char *ip_addr, unsigned short 
                                   _verbosity(verbosity),
                                   _ip_addr(ip_addr),
                                   _port(port)
-
 {
    _start_time = time(NULL) + offset;
+   std::cout << " REPLSERVER _start_time is: " << _start_time << " REPLSERVER offset is: " << offset << std::endl;
+   simrepserverstarttime = _start_time;
+   
 }
 
 ReplServer::~ReplServer() {
@@ -58,7 +62,10 @@ ReplServer::~ReplServer() {
  **********************************************************************************************/
 
 time_t ReplServer::getAdjustedTime() {
+//   std::cout << "getAdjustedTime() is" << static_cast<time_t>((time(NULL) - _start_time) * _time_mult) << std::endl; //" offset is: " << offset << std::endl;
+   //simrepserverstarttime = static_cast<time_t>((time(NULL) - _start_time) * _time_mult);
    return static_cast<time_t>((time(NULL) - _start_time) * _time_mult);
+   
 }
 
 /**********************************************************************************************
@@ -155,19 +162,31 @@ unsigned int ReplServer::queueNewPlots() {
       // If this is a new one, marshall it and clear the flag
       if (dpit->isFlagSet(DBFLAG_NEW)) {
 
-         //std::cout << "01:SHOW ME marshall_data in ReplServer::queueNewPlots";
-         //for (int i = 0; i<marshall_data.size(); i++){std::cout << (char) marshall_data.at(i) << "";} std::cout << std::endl;
-
+         //this loads the serialized data into  std::vector<uint8_t> marshall_data;
          dpit->serialize(marshall_data);
-         //std::cout << "02:SHOW ME marshall_data in ReplServer::queueNewPlots";
-         //for (int i = 0; i<marshall_data.size(); i++){std::cout << (char) marshall_data.at(i) << "";} std::cout << std::endl;
 
-         //DESERIALIZE that data and see it
-         //dpit->deserialize(marshall_data, 0);
-         //std::cout << "03:SHOW ME marshall_data in ReplServer::queueNewPlots";
-         //for (int i = 0; i<marshall_data.size(); i++){std::cout << (char) marshall_data.at(i) << "";} std::cout << std::endl;
-      
+         dpit->deserialize(marshall_data, 0);
          
+         std::cout << "\nBEFORE drone_id " << dpit->drone_id << " node_id " << dpit->node_id << 
+         " timestamp " << dpit->timestamp << " lat " << dpit->latitude << " long " << dpit->longitude << "\n";
+         
+         dpit->timestamp = simrepserverstarttime; 
+         
+         std::cout << "\nAFTER drone_id " << dpit->drone_id << " node_id " << dpit->node_id << 
+         " timestamp " << dpit->timestamp << " lat " << dpit->latitude << " long " << dpit->longitude << "\n";
+         
+         //<< " myoffset: " << myoffset << " (timestamp-offset)= " << dpit->timestamp - myoffset
+
+//         std::cout << "SYS time is: " << simrepserverstarttime << 
+//         " OLD _plotdb time is: " << dpit->timestamp;
+//         dpit->timestamp = 1200;//simrepserverstarttime - myoffset;
+//         std::cout << " OverWROTE _plotdb time with: " << dpit->timestamp << 
+//         " using offset " << myoffset << std::endl;
+
+         
+         
+
+
          dpit->clrFlags(DBFLAG_NEW);
 
          count++;
