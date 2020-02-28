@@ -47,6 +47,9 @@ ReplServer::ReplServer(DronePlotDB &plotdb, const char *ip_addr, unsigned short 
                                   _port(port)
 {
    _start_time = time(NULL) + offset;
+   std::cout << "TO COL NOEL: My repsvr_main was modified with usleep(400) and each server"
+   "\nwas launched 1 second apart so that I truly got different server startup times"
+   "\nALL GLOBAL Variables declared in your strfuncts.h file\n\n";
    std::cout << " REPLSERVER _start_time is: " << _start_time << " REPLSERVER offset is: " << offset << std::endl;
    simrepserverstarttime = _start_time;
    
@@ -62,7 +65,7 @@ ReplServer::~ReplServer() {
  **********************************************************************************************/
 
 time_t ReplServer::getAdjustedTime() {
-//   std::cout << "getAdjustedTime() is" << static_cast<time_t>((time(NULL) - _start_time) * _time_mult) << std::endl; //" offset is: " << offset << std::endl;
+   //std::cout << "getAdjustedTime() is" << static_cast<time_t>((time(NULL) - _start_time) * _time_mult) << std::endl; //" offset is: " << offset << std::endl;
    //simrepserverstarttime = static_cast<time_t>((time(NULL) - _start_time) * _time_mult);
    return static_cast<time_t>((time(NULL) - _start_time) * _time_mult);
    
@@ -88,7 +91,7 @@ void ReplServer::replicate(const char *ip_addr, unsigned short port) {
 void ReplServer::replicate() {
 
    // Track when we started the server
-   _start_time = time(NULL);
+   //_start_time = time(NULL);  // HEY HEY HEY... WHATS THIS?????
    _last_repl = 0;
 
    // Set up our queue's listening socket
@@ -165,15 +168,26 @@ unsigned int ReplServer::queueNewPlots() {
          //this loads the serialized data into  std::vector<uint8_t> marshall_data;
          dpit->serialize(marshall_data);
 
+// HERE HERE HERE IS WHERE I THOUGHT IT BEST TO OVERWRIE THE DATA IN THE DRONPLOTDB WITH THE
+// PROPER SYSTEM TIMESTAMP
+
+// NOTE: I would also add in the getAjustedTime() so that I could get the current clock ticks
+// involved in this code. Right now I was just trying to overwrite timestamps to a constant value
+
          dpit->deserialize(marshall_data, 0);
          
-         std::cout << "\nBEFORE drone_id " << dpit->drone_id << " node_id " << dpit->node_id << 
+         std::cout << "\nBEFORE MODIFICATION: drone_id " << dpit->drone_id << " node_id " << dpit->node_id << 
          " timestamp " << dpit->timestamp << " lat " << dpit->latitude << " long " << dpit->longitude << "\n";
          
          dpit->timestamp = simrepserverstarttime; 
          
-         std::cout << "\nAFTER drone_id " << dpit->drone_id << " node_id " << dpit->node_id << 
+         std::cout << "\nAFTER MODIFICATION: drone_id " << dpit->drone_id << " node_id " << dpit->node_id << 
          " timestamp " << dpit->timestamp << " lat " << dpit->latitude << " long " << dpit->longitude << "\n";
+
+// BUT MY CHANGES DO NOT STICK... AND WEIRD THINGS HAPPEN WHEN YOU LOOK AT THE SERVER FILES
+// USUALLY ONLY A PORTIN OF MY MODIFIED VALUES STICK... WHEN USING 
+// dpit->timestamp = 10...  the first third of file has all 10's ????
+// dpit->timestamp = simrepserverstarttime... and the middle third has that value ??? 
          
          //<< " myoffset: " << myoffset << " (timestamp-offset)= " << dpit->timestamp - myoffset
 

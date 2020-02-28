@@ -9,6 +9,8 @@
 #include "strfuncts.h"
 #include "exceptions.h"
 
+/*** LARKIN ****/
+//NO REAL CHANGES TO THIS FILE
 
 // Log manager, supports log_lvl for verbosity control
 LogMgr::LogMgr(const char *log_file, unsigned int log_lvl):_log_file(log_file),_log_lvl(log_lvl) {

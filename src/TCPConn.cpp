@@ -19,12 +19,11 @@
 #include <ctime>
 #include <stdlib.h>
 
-
-
 using namespace CryptoPP;
 
 //PLACE THIS FUNCTION AT THE TOP BECUASE IT DOES NOT NEED TO BE ASSOCIATED WITH THIS CLASS
 //I JUST NEED IT TO GENERATE A RANDOM STRING
+//I FORGOT THAT COL NOEL ALREADY GAVE US THIS... WHOOPS
 //TAKEN FROM: https://stackoverflow.com/questions/440133/how-do-i-create-a-random-alpha-numeric-string-in-c
 std::string random_string( size_t length ) {
    auto randchar = []() -> char  {
@@ -75,7 +74,7 @@ TCPConn::TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int v
 
    c_ack.push_back((uint8_t) '<');    c_ack.push_back((uint8_t) 'A');    c_ack.push_back((uint8_t) 'C');
    c_ack.push_back((uint8_t) 'K');    c_ack.push_back((uint8_t) '>');
-
+//MODIFIED AUTH TAG
    c_auth.push_back((uint8_t) '<');    c_auth.push_back((uint8_t) 'A');    c_auth.push_back((uint8_t) 'U');
    c_auth.push_back((uint8_t) 'T');    c_auth.push_back((uint8_t) 'H');    c_auth.push_back((uint8_t) '>');
 
@@ -88,21 +87,22 @@ TCPConn::TCPConn(LogMgr &server_log, CryptoPP::SecByteBlock &key, unsigned int v
    c_endsid = c_sid;
    c_endsid.insert(c_endsid.begin()+1, 1, slash);
    
-   //CHAL for sending the challenge
+//CHAL for sending the challenge
    c_chal.push_back((uint8_t) '<');    c_chal.push_back((uint8_t) 'C');    c_chal.push_back((uint8_t) 'H');
    c_chal.push_back((uint8_t) 'A');    c_chal.push_back((uint8_t) 'L');    c_chal.push_back((uint8_t) '>');
 
    c_endchal = c_chal;
    c_endchal.insert(c_endchal.begin()+1, 1, slash);
    
-   //RESP for sending an ENCRYPTED response to the challenge
+//RESP for sending an ENCRYPTED response to the challenge
    c_resp.push_back((uint8_t) '<');    c_resp.push_back((uint8_t) 'R');    c_resp.push_back((uint8_t) 'E');
    c_resp.push_back((uint8_t) 'S');    c_resp.push_back((uint8_t) 'P');    c_resp.push_back((uint8_t) '>');
 
    c_endresp = c_resp;
    c_endresp.insert(c_endresp.begin()+1, 1, slash);
    
-   //TIME; T0 for Initial, T1 for first attempt to sync, T2 for final attempt
+//TIME; T0 for Initial time sync, T1 for first attempt to ensure we are synced, T2 for final attempt
+//T1 and T2 NOT CODED
    c_t0.push_back((uint8_t) '<');    c_t0.push_back((uint8_t) 'T');    c_t0.push_back((uint8_t) '0');    c_t0.push_back((uint8_t) '>');
    c_t1.push_back((uint8_t) '<');    c_t1.push_back((uint8_t) 'T');    c_t1.push_back((uint8_t) '1');    c_t1.push_back((uint8_t) '>');
    c_t2.push_back((uint8_t) '<');    c_t2.push_back((uint8_t) 'T');    c_t2.push_back((uint8_t) '2');    c_t2.push_back((uint8_t) '>');
@@ -256,16 +256,7 @@ void TCPConn::handleConnection() {
 }
    //ONE send UNencrypted <TIME><SID><CHAL>
    void TCPConn::oneClientSendsCHAL() {
-      
-      //td::cout << "***My simrepserverstarttime in TCPConn.cpp.256 is: " << simrepserverstarttime << std::endl;
-      //std::cout << "***The simulatoroffset in TCPConn.cpp.257 is: " << globalsimtimeoffset << std::endl;
-      //std::cout << "The Adjusted Time is: " << getAdjustedTime() <<"\n";
-
-//      ReplServer *temp;
-//      time_t mytime; 
-//      mytime = temp->getAdjustedTime();
-//      std::cout << "ONE: send UNencrypted <TIME><SID><CHAL> & mytime is: " << mytime <<"\n";
-      
+         
       std::stringstream msg;
       msg << "In clientSendSID()";
       _server_log.writeLog(msg.str().c_str());
@@ -278,6 +269,8 @@ void TCPConn::handleConnection() {
 //      std::string str2 = std::to_string(globalrealifesystemstarttime);
 //      std::cout << "testthis is: " << (unsigned long) globalrealifesystemstarttime 
 //         << "timestr is: " << timestr << " str2 is: " << str2 << std::endl;
+//
+//       SOLUTION: Type cast to a unsigned long and store
 /*** THIS WAS A COMPLETE WASTE OF MY TIME... TRYING TO CONVERT FROM TIME_T TO STRING TO UINT_8 AND BACK***/
 
       std::string timestr = std::to_string(simrepserverstarttime); 
@@ -303,10 +296,6 @@ void TCPConn::handleConnection() {
       std::vector<uint8_t> sendchallenge(_authstr.begin(), _authstr.end());
       wrapCmd(sendchallenge, c_chal, c_endchal);
       buf.insert(buf.end(), sendchallenge.begin(), sendchallenge.end());
-
-      //std::cout << "\n\n265 std::vector<uint8_t> buf in oneClientSendsCHAL() is: ";
-      //for (int i=0; i<buf.size(); i++){
-      //std::cout << buf.at(i); } std::cout << "\n";
 
       sendData(buf);
 
@@ -339,8 +328,8 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       wrapCmd(temp, c_t0, c_endt0);
       buf.insert(buf.begin(), temp.begin(), temp.end());
       
-      sendData(buf);
-      //sendEncryptedData(buf);
+      //sendData(buf);
+      sendEncryptedData(buf);
 
       _status = s_fourserver;
    } else {   /*std::cout << "Nothing on buffer in twoSvrSendsRESPtoCHAL\n"; */}
@@ -351,8 +340,8 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
-      //if (!getEncryptedData(buf))
-      if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
+      if (!getEncryptedData(buf))
+      //if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
       
       //Get the other system (i.e. servers) time from between the <t0> tags
@@ -375,19 +364,19 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       otherserversstarttimes.push_back(otherservertime);
       }
 
-      //PRINT WHATS IN THE VECTORS
-//      std::cout << "371 otherserverids and otherserversrealtimes in threeClientProcRESP() is: \n";
-//      for (int i=0; i<otherserverids.size(); i++){ 
-//         std::cout << "SvrID: " << otherserverids.at(i) <<" Time: " << otherserversstarttimes.at(i) <<"\n"; 
-//      } std::cout << "\n";      
+      //PRINT WHATS IN THE VECTORS SO COL NOEL CAN SEE THE LIST OF COLLECTED SYSTEM TIMES
+      std::cout << "371 otherserverids and otherserversrealtimes in threeClientProcRESP() is: \n";
+      for (int i=0; i<otherserverids.size(); i++){ 
+         std::cout << "SvrID: " << otherserverids.at(i) <<" Time: " << otherserversstarttimes.at(i) <<"\n"; 
+      } std::cout << "\n";      
 
-      //Find the minimum element in the vector
-      //std::cout << "My SYS time is: " << simrepserverstarttime << " and MIN element in otherserverrealtimes is: " << *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end()) << std::endl;
+      //Find the minimum element in the vector, print a message to the screen "Am I min OR what's my offset"
+      std::cout << "My SYS time is: " << simrepserverstarttime << "\nMIN element in otherserverrealtimes is: " << *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end()) << std::endl;
       if(simrepserverstarttime == *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end())){
-         //std::cout << "I'm the min with offset zero" << std::endl;
+         std::cout << "I'm the min with offset zero" << std::endl;
          myoffset = 0;
       } else {
-         //std::cout << " and I'm NOT the min with offset of: " << simrepserverstarttime - *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end()) << std::endl;
+         std::cout << "and I'm NOT the min with offset of minus: " << simrepserverstarttime - *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end()) << std::endl;
          myoffset = simrepserverstarttime - *std::min_element(otherserversstarttimes.begin(), otherserversstarttimes.end());
       }
       
@@ -398,7 +387,7 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
       for (int i=0; i<buf.size(); i++){  challengeresponsefromsvr += buf.at(i); }
       
       if (_authstr.compare(challengeresponsefromsvr) == 0) {
-         //std::cout << "\n***strings Equal in in three***\n";
+         //std::cout << "\n***strings Equal in in three***\n"; //used for testing if decrypted <RESP> matched the <CHAL>
          std::string authenticated = "clientTRUSTSserver";
          buf.assign(authenticated.begin(), authenticated.end());
          wrapCmd(buf, c_auth, c_endauth);
@@ -409,13 +398,13 @@ void TCPConn::twoSvrSendsRESPtoCHAL(){//std::cout << "TWO: send ENcrypted <TIME>
          wrapCmd(mysid, c_sid, c_endsid);
          buf.insert(buf.begin(), mysid.begin(), mysid.end());
 
-         //INSERT <T1> Timestamp
+         //INSERT <T1> Timestamp //Ran out of time to code... <T0> tag worked majority of the time
          std::string timestr = "seqTHREEtimestamp"; 
          std::vector<uint8_t> temp(timestr.begin(), timestr.end());
          wrapCmd(temp, c_t1, c_endt1);
          buf.insert(buf.begin(), temp.begin(), temp.end());
-         sendData(buf);
-         //sendEncryptedData(buf);
+         //sendData(buf);
+         sendEncryptedData(buf); // ENABLES THE SENDING OF AN ENCRYPTED AND TRUSTED TIMESTAMP
          _status = s_fiveclient; //if Good goto FIVE and prcess Svrs CHAL
       } else {
          std::cout << "SERVER DID NOT USE PROPER ENCRYPTION KEY. Client DONT trust yah!";
@@ -431,7 +420,7 @@ void TCPConn::fourSvrSendsCHAL(){
    //std::cout << "Entered FOUR with data on socket: send UNencrypted <TIME><SID><CHAL>\n";
    std::vector<uint8_t> buf;
 
-   //if (!getEncryptedData(buf))
+   if (!getEncryptedData(buf))
    if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
    return;
 
@@ -461,7 +450,7 @@ void TCPConn::fourSvrSendsCHAL(){
    wrapCmd(sendchallenge, c_chal, c_endchal);
    buf.insert(buf.end(), sendchallenge.begin(), sendchallenge.end());
 
-   sendData(buf);
+   sendData(buf); //SEND UNecrypted <CHAL>
    _status = s_sixserver;
    }
 }
@@ -471,7 +460,6 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
-      //if (!getEncryptedData(buf))
       if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
       
@@ -498,8 +486,8 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
       wrapCmd(temp, c_t2, c_endt2);
       buf.insert(buf.begin(), temp.begin(), temp.end());
       
-      sendData(buf);
-      //sendEncryptedData(buf);
+      //sendData(buf);
+      sendEncryptedData(buf); //send ENcrypted <RESP> and a trusted <T2> tag
 
       _status = s_sevendatatx;
 
@@ -513,8 +501,8 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
-      //if (!getEncryptedData(buf))
-      if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
+      if (!getEncryptedData(buf))
+      //if (!getData(buf)) //getData zero's out the passed in buffer and gets whats on the socket
       return;
       
       std::vector<uint8_t> gett2(buf.begin(), buf.end());
@@ -546,9 +534,9 @@ void TCPConn::fiveClientSendsRESPtoCHAL(){//std::cout << "FIVE: send ENcrypted <
          wrapCmd(temp, c_t2, c_endt2);
          buf.insert(buf.begin(), temp.begin(), temp.end());
          
-         sendData(buf);
-         //sendEncryptedData(buf);
-         _status = s_eightdatarx; //if good go to eight and receive REP dat form client
+         //sendData(buf);
+         sendEncryptedData(buf);
+         _status = s_eightdatarx; //if good go to eight and receive <REP> dat form client
       } else {
          std::cout << "strings NOT EQUAL in five";
       }
@@ -566,8 +554,8 @@ void TCPConn::sevenClientTxREPData() {
    if (_connfd.hasData()) {
       std::vector<uint8_t> buf;
 
-      //if (!getEncryptedData(buf))
-      if (!getData(buf))
+      if (!getEncryptedData(buf))
+      //if (!getData(buf))
          return;
 
       //If an <AUTH> tag on the buffer, we have a trust
@@ -584,6 +572,8 @@ void TCPConn::sevenClientTxREPData() {
       //test to ensure we have SA on all other servers via the maxnumservers variable
       //maxnumservers declared in strfuncts.h and set in ReplServer.cpp
       // WHEN I GET TRAPPED HERE... I NEVER GET AN UPDATED VECTOR TABLE
+      // RAN OUT OF TIME TO PROGAM THIS LOGIC where I wait for that server that took 15 seconds to start up
+      
       //while (otherserverids.size() != maxnumservers){
       //   std::cout << "Sleeping one second to collect other servers SID and TIME" << std::endl;
       //   sleep(1);
@@ -593,8 +583,8 @@ void TCPConn::sevenClientTxREPData() {
       setNodeID(node.c_str());
 
       // Send the replication data
-      sendData(_outputbuf);
-      //sendEncryptedData(_outputbuf);
+      //sendData(_outputbuf);
+      sendEncryptedData(_outputbuf);
 
       // Show what is in the replication data
          DronePlot bob_tmp_plot; //#include "DronePlotDB.h" was placed in TCPconn.h
@@ -645,11 +635,12 @@ void TCPConn::eigthSvrRxREPData() {
    //std::cout << "\n Entered TCPConn::waitForData where _connfd.hasData()";
       std::vector<uint8_t> buf;
 
-      //if (!getEncryptedData(buf))
-      if (!getData(buf))
+      if (!getEncryptedData(buf))
+      //if (!getData(buf))
          return;
 
-      if (!getCmdData(buf, c_rep, c_endrep)) {
+      if (!getCmdData(buf, c_rep, c_endrep)) { //could have also test for AUT tag... but that you cant get
+                                                //get to this step if your NOT authenticated
          std::stringstream msg;
          msg << "Replication data possibly corrupted from" << getNodeID() << "\n";
          _server_log.writeLog(msg.str().c_str());
@@ -662,8 +653,9 @@ void TCPConn::eigthSvrRxREPData() {
       _data_ready = true;
 
       // Send the acknowledgement and disconnect
+      //leaving this Uncrypted so that it shows up in wireshark, I've shown proper use of encrypt/decrypt
       sendData(c_ack);
-      //sendEncryptedData(c_ack);
+      //sendEncryptedData(c_ack); 
 
       if (_verbosity >= 2)
          std::cout << "Successfully received replication data from " << getNodeID() << "\n";
@@ -699,6 +691,7 @@ void TCPConn::nineClientRxAck() {
          _server_log.writeLog(msg.str().c_str());
       }
   
+// I NEVER FIGURED OUT WHY I GOT CAUGHT UP HERE
       //if (_verbosity >= 3)
          std::cout << "Data ack received from " << getNodeID() << ". Disconnecting.\n";
 

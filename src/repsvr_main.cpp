@@ -1,3 +1,14 @@
+/******** ROBERT LARKIN TO DO LIST PRIOR TO TURN IN AT 1700********
+ * Comment Code
+ * Per Lt Col Noel, it is ok to keep print statments to console showing Time Sync
+ * Show where I tried to overwrite and keep DB data consistent
+ * Provide comments on How to Make Code Better
+ * Discuss use of Global Variables as it relates to my troubleshooting
+ * Provide a recap of my troubleshooting with Time Sync
+ * Push to GitHub with -c "Larkin Final HW4 Push"
+ ******** ROBERT LARKIN TO DO LIST PRIOR TO TURN IN AT 1700********/
+
+
 /****************************************************************************************
  * repsvr_main - A replication server that receives drone information from an "antenna" and
  *               replicates that information to other servers. The antenna is simulated by
